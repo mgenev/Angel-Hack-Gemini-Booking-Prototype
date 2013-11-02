@@ -26,7 +26,6 @@ window.app.config(['$routeProvider',
         when('/clients/:clientId', {
             templateUrl: 'views/clients/view.html'
         }).
-
         when('/reservations', {
             templateUrl: 'views/reservations/list.html'
         }).
@@ -39,7 +38,12 @@ window.app.config(['$routeProvider',
         when('/reservations/:reservationId', {
             templateUrl: 'views/reservations/view.html'
         }).
-
+        when('/bookingflow', {
+            templateUrl: 'views/bookingflow/greeting.html'
+        }).
+        when('/bookingflow/date-location', {
+            templateUrl: 'views/bookingflow/date_location.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).
