@@ -3,6 +3,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
+            compass: {
+                files: ['public/sass/{,*/}*.{scss,sass}'],
+                tasks: ['compass:server', 'autoprefixer']
+            },
             jade: {
                 files: ['app/views/**'],
                 options: {
@@ -29,6 +33,32 @@ module.exports = function(grunt) {
                 }
             }
         },
+        compass: {
+            options: {
+                sassDir: 'public/sass',
+                cssDir: 'public/css',
+                generatedImagesDir: '.tmp/img/generated',
+                imagesDir: 'public/img',
+                javascriptsDir: 'public/js',
+                // fontsDir: '<%= yeoman.app %>/styles/fonts',
+                importPath: 'public/lib',
+                httpImagesPath: '/img',
+                httpGeneratedImagesPath: '/img/generated',
+                httpFontsPath: '/styles/fonts',
+                relativeAssets: false,
+                assetCacheBuster: false
+            },
+            dist: {
+                options: {
+                    generatedImagesDir: 'dist/img/generated'
+                }
+            },
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
+        },
         jshint: {
             all: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/**/*.js']
         },
@@ -50,7 +80,7 @@ module.exports = function(grunt) {
             }
         },
         concurrent: {
-            tasks: ['nodemon', 'watch'], 
+            tasks: ['nodemon', 'watch'],
             options: {
                 logConcurrentOutput: true
             }
@@ -70,7 +100,9 @@ module.exports = function(grunt) {
 
     //Load NPM tasks 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
@@ -80,7 +112,7 @@ module.exports = function(grunt) {
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'concurrent']);
+    grunt.registerTask('default', [ 'concurrent']);
 
     //Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest']);
