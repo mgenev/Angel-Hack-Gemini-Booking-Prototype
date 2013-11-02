@@ -14,6 +14,12 @@ var ReservationSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    startDate: {
+        type: Date
+    },
+    endDate: {
+        type: Date
+    },
     title: {
         type: String,
         default: '',
@@ -23,6 +29,11 @@ var ReservationSchema = new Schema({
         type: Array,
         default: [],
         ref: 'Activity'
+    },
+    resorts: {
+        type: Array,
+        default: [],
+        ref: 'Resorts'
     },
     content: {
         type: String,

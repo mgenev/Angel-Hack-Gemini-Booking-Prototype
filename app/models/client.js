@@ -41,6 +41,16 @@ var ClientSchema = new Schema({
             trim: true
         },
     },
+    activities: {
+        type: Array,
+        default: [],
+        ref: 'Activity'
+    },
+    resorts: {
+        type: Array,
+        default: [],
+        ref: 'Resorts'
+    },
     type: {
         type: String,
         default: '',
