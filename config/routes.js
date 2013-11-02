@@ -84,8 +84,6 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('clientId', clients.client);
 
-
-
     //Reservation Routes
     var reservations = require('../app/controllers/reservations');
     app.get('/reservations', reservations.all);
@@ -96,6 +94,18 @@ module.exports = function(app, passport, auth) {
 
     //Finish with setting up the reservationId param
     app.param('reservationId', reservations.reservation);
+
+    //Reservation Routes
+    var activities = require('../app/controllers/activities');
+    app.get('/activities', activities.all);
+    app.post('/activities', auth.requiresLogin, activities.create);
+    app.get('/activities/:activityId', activities.show);
+    app.put('/activities/:activityId', auth.requiresLogin, auth.activity.hasAuthorization, activities.update);
+    app.del('/activities/:activityId', auth.requiresLogin, auth.activity.hasAuthorization, activities.destroy);
+
+    //Finish with setting up the activityId param
+    app.param('activityId', activities.activity);
+
 
     //Home route
     var index = require('../app/controllers/index');
