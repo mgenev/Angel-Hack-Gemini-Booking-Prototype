@@ -7,6 +7,10 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     }, {
         "title": "Create New Article",
         "link": "articles/create"
+    }, 
+    {
+        "title": "Create New Reservation",
+        "link": "reservations/create"
     }];
     
     $scope.isCollapsed = false;

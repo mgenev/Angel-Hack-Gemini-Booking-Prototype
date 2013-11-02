@@ -1,7 +1,7 @@
 {
     "db": "mongodb://localhost/angelhack-gemini",
     "app": {
-        "name": "MEAN - A Modern Stack - Development"
+        "name": "Gemini Bookings"
     },
     "facebook": {
         "clientID": "APP_ID",
