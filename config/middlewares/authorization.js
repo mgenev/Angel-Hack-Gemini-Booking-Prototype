@@ -32,6 +32,9 @@ exports.article = {
     }
 };
 
+/**
+ * Client authorizations routing middleware
+ */
 exports.client = {
     hasAuthorization: function(req, res, next) {
         if (req.client.user.id != req.user.id) {
@@ -47,6 +50,19 @@ exports.client = {
 exports.reservation = {
     hasAuthorization: function(req, res, next) {
         if (req.reservation.user.id != req.user.id) {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
+    }
+};
+
+
+/**
+ * Activity authorizations routing middleware
+ */
+exports.activity = {
+    hasAuthorization: function(req, res, next) {
+        if (req.activity.user.id != req.user.id) {
             return res.send(401, 'User is not authorized');
         }
         next();

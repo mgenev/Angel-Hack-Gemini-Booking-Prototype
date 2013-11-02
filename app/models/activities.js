@@ -7,9 +7,9 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Reservation Schema
+ * Activity Schema
  */
-var ReservationSchema = new Schema({
+var ActivitySchema = new Schema({
     created: {
         type: Date,
         default: Date.now
@@ -19,38 +19,33 @@ var ReservationSchema = new Schema({
         default: '',
         trim: true
     },
-    activities: {
-        type: Array,
-        default: [],
-        ref: 'Activity'
-    },
     content: {
         type: String,
         default: '',
         trim: true
     },
-    user: {
+    client: {
         type: Schema.ObjectId,
-        ref: 'User'
+        ref: 'Client'
     }
 });
 
 /**
  * Validations
  */
-ReservationSchema.path('title').validate(function(title) {
+ActivitySchema.path('title').validate(function(title) {
     return title.length;
 }, 'Title cannot be blank');
 
 /**
  * Statics
  */
-ReservationSchema.statics = {
+ActivitySchema.statics = {
     load: function(id, cb) {
         this.findOne({
             _id: id
-        }).populate('user', 'name username').exec(cb);
+        }).populate('client', 'name address').exec(cb);
     }
 };
 
-mongoose.model('Reservation', ReservationSchema);
+mongoose.model('Activity', ActivitySchema);
