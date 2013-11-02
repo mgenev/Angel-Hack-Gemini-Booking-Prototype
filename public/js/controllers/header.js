@@ -9,6 +9,10 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         "link": "articles/create"
     }, 
     {
+        "title": "Create New Client",
+        "link": "clients/create"
+    }, 
+    {
         "title": "Create New Reservation",
         "link": "reservations/create"
     }];

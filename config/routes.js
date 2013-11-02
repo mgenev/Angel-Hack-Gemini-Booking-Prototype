@@ -73,6 +73,20 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
+    //Article Routes
+    var clients = require('../app/controllers/clients');
+    app.get('/clients', clients.all);
+    app.post('/clients', auth.requiresLogin, clients.create);
+    app.get('/clients/:clientId', clients.show);
+    app.put('/clients/:clientId', auth.requiresLogin, auth.client.hasAuthorization, clients.update);
+    app.del('/clients/:clientId', auth.requiresLogin, auth.client.hasAuthorization, clients.destroy);
+
+    //Finish with setting up the articleId param
+    app.param('clientId', clients.client);
+
+
+
+
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);

@@ -3,7 +3,7 @@
  */
 var mongoose = require('mongoose'),
     async = require('async'),
-    Article = mongoose.model('Client'),
+    Client = mongoose.model('Client'),
     _ = require('underscore');
 
 
