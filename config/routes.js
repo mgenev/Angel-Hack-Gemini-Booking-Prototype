@@ -86,6 +86,16 @@ module.exports = function(app, passport, auth) {
 
 
 
+    //Reservation Routes
+    var reservations = require('../app/controllers/reservations');
+    app.get('/reservations', reservations.all);
+    app.post('/reservations', auth.requiresLogin, reservations.create);
+    app.get('/reservations/:reservationId', reservations.show);
+    app.put('/reservations/:reservationId', auth.requiresLogin, auth.reservation.hasAuthorization, reservations.update);
+    app.del('/reservations/:reservationId', auth.requiresLogin, auth.reservation.hasAuthorization, reservations.destroy);
+
+    //Finish with setting up the reservationId param
+    app.param('reservationId', reservations.reservation);
 
     //Home route
     var index = require('../app/controllers/index');
