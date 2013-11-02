@@ -40,3 +40,15 @@ exports.client = {
         next();
     }
 };
+
+/**
+ * Reservation authorizations routing middleware
+ */
+exports.reservation = {
+    hasAuthorization: function(req, res, next) {
+        if (req.reservation.user.id != req.user.id) {
+            return res.send(401, 'User is not authorized');
+        }
+        next();
+    }
+};

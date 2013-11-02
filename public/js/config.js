@@ -26,6 +26,20 @@ window.app.config(['$routeProvider',
         when('/clients/:clientId', {
             templateUrl: 'views/clients/view.html'
         }).
+
+        when('/reservations', {
+            templateUrl: 'views/reservations/list.html'
+        }).
+        when('/reservations/create', {
+            templateUrl: 'views/reservations/create.html'
+        }).
+        when('/reservations/:reservationId/edit', {
+            templateUrl: 'views/reservations/edit.html'
+        }).
+        when('/reservations/:reservationId', {
+            templateUrl: 'views/reservations/view.html'
+        }).
+
         when('/', {
             templateUrl: 'views/index.html'
         }).
