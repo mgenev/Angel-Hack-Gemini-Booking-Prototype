@@ -1,18 +1,39 @@
-angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
+angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', 'Clients', 'Services', 'Users', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
+
     $scope.global = Global;
     $scope.reservation = {};
 
+    $scope.pickDateDestination = true;
+    $scope.resortList = false;
+
+
+
+
+   
     $scope.start = function () {
-        $location.path("bookingflow/date-location" );
+        $location.path("bookingflow/flow" );        
     }
 
     $scope.pickDateDestination = function () {
         $scope.reservation.destination = this.destination;
         $scope.reservation.start = this.start;
-        $scope.reservation.end = this.end;
-
-        console.log($scope.reservation);
+        $scope.reservation.end = this.end;                
+        console.log("does this fire?");
+        $scope.findClients();
     }
+
+    $scope.findClients = function() {
+
+        Clients.query(function(clients) {
+
+            $scope.clients = clients;
+            // $scope.pickDateDestination = false;
+            $scope.resortList = true;
+            console.log($scope.clients);
+
+        });
+        
+    };
 
     // $scope.create = function() {
     //     var reservation = new Reservations({
