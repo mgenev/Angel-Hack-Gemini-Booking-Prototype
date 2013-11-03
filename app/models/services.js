@@ -7,9 +7,9 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Activity Schema
+ * Service Schema
  */
-var ActivitySchema = new Schema({
+var ServiceSchema = new Schema({
     created: {
         type: Date,
         default: Date.now
@@ -33,14 +33,14 @@ var ActivitySchema = new Schema({
 /**
  * Validations
  */
-ActivitySchema.path('title').validate(function(title) {
+ServiceSchema.path('title').validate(function(title) {
     return title.length;
 }, 'Title cannot be blank');
 
 /**
  * Statics
  */
-ActivitySchema.statics = {
+ServiceSchema.statics = {
     load: function(id, cb) {
         this.findOne({
             _id: id
@@ -48,4 +48,4 @@ ActivitySchema.statics = {
     }
 };
 
-mongoose.model('Activity', ActivitySchema);
+mongoose.model('Service', ServiceSchema);
