@@ -62,16 +62,20 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             serviceId: serviceId
         }, function(service) {
             $scope.selectedServices.push(service);
-            console.log($scope.selectedServices);
-        });
-
-        var reservation = $scope.reservation;
+            console.log(service);
+        
+            var reservation = $scope.reservation;
 
         // reservation.updated.push(new Date().getTime());
+            reservation.services.push(service);
+            console.log(reservation.services);
+            reservation.$update(function(response) {
+                $location.path("bookingflow/servicelist/" + response._id);
+            });
 
-        reservation.$update(function(response) {
-            $location.path("bookingflow/servicelist/" + response._id);
         });
+
+
 
     };
 
@@ -109,6 +113,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             reservationId: $routeParams.reservationId
         }, function(reservation) {
             $scope.reservation = reservation;
+            console.log("the reservation is", $scope.reservation)
         });
     };
 }]);
