@@ -20,15 +20,17 @@ exports.service = function(req, res, next, id) {
     });
 };
 
+var util = require('util');
 /**
  * Create a service
  */
 exports.create = function(req, res) {
     var service = new Service(req.body);
     console.log("service client is: ", service.client.toString());    
-    service.client = mongoose.Types.ObjectId(service.client.toString());
+    //service.client = mongoose.Types.ObjectId(service.client.toString());
+    //console.log("request client name is: ", util.inspect(req.client));
 
-    console.log("service client is: ", service.client);
+    //console.log("service client is: ", service.client);
 
     service.save(function(err, service) {
         //console.log('saving: ' + JSON.stringify(service));
