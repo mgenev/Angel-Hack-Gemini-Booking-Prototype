@@ -48,6 +48,10 @@ var ServiceSchema = new Schema({
               'endDate': new Date(2015, 11, 01)
             }
         ]
+    },
+    price: {
+        type: Number,
+        default: 0
     }
 });
 
