@@ -28,7 +28,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
 
     $scope.findResortServices = function() {
 
-        ServicesByType.query({ serviceType: 'resort' }, function (services) {
+        ServicesByType.query({ serviceType: 'lodging' }, function (services) {
             console.log('resort services are', services);
             $scope.services = services;         
         });        
@@ -109,7 +109,11 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     }
 
     $scope.changeToSelectActivity = function () {
-         $location.path('bookingflow/serviceactivitylist/' + $scope.reservation._id);
+        $location.path('bookingflow/service-activity-list/' + $scope.reservation._id);
+    }
+
+    $scope.gotoConfirm = function () {
+        $location.path('bookingflow/confirm-reservation/' + $scope.reservation._id);   
     }
 
     // $scope.remove = function(reservation) {

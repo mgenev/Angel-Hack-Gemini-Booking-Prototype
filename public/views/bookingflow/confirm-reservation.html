@@ -1,0 +1,34 @@
+<section data-ng-controller="BookingFlowController" data-ng-init="findOneReservation()">
+
+    <h1>Please review your booking</h1>
+    <div> Your res {{reservation.services}}</div>
+    <div class="servicelist">
+        <ul class="resorts unstyled">
+            <li data-ng-repeat="service in reservation.services">
+                    <span>the service {{service}}</span>
+                    <span>{{service.service.title}}</span>
+                    <span id="selected{{service.service._id}}" class="hidden"></span>
+
+                    <div id="listWrap{{service._id}}">
+                    <div>{{service.serviceType}}</div>
+                    <div>{{service.content}}</div>
+                    <img width="100px" src="{{service.thumbnailUrl}}">
+
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="serviceDetails($event)">ViewDetails</div>
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
+                    <!-- if this div doesn't follow the previois, the ui will break -->
+                </div>
+            </li>
+        </ul>
+        <h1 data-ng-hide="!services || services.length">No resorts match
+            <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
+    </div>
+
+    <div id="footer" class="container" ng-click="confirmBooking()">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-inner navbar-content-center">
+        Finalize your booking
+        </div>
+    </nav>
+</div>
+</section>
