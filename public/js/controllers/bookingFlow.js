@@ -58,11 +58,16 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         // here reservation has to equal the product of the find
         // console.log("fires", serviceId);
         $scope.selectedServiceId = e.srcElement.id;
+
         var pickers = angular.element(e.srcElement).next().removeClass("hidden");
+        console.log(document.querySelector( '#startDate'+ $scope.selectedServiceId ));
+
+        $( '#startDate'+ $scope.selectedServiceId ).pickadate();
+        $( '#endDate'+ $scope.selectedServiceId ).pickadate();
     };
 
     $scope.postServiceDates = function () {
-         var serviceId = $scope.selectedServiceId;
+         var serviceId = $scope.selectedServiceId;            
 
         Services.get({
             serviceId: serviceId
@@ -71,9 +76,10 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             var startDate = angular.element(document.querySelector( '#startDate'+serviceId ) ).val();
             var endDate = angular.element(document.querySelector( '#endDate'+serviceId ) ).val();
             var amount = angular.element(document.querySelector( '#amount'+serviceId ) ).val();
+
         
             var reservation = $scope.reservation;
-            
+
             var datedService = {
                 service: service,
                 startDate: startDate,
@@ -89,7 +95,10 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             console.log(reservation.services);
             
             reservation.$update(function(response) {
-                $location.path("bookingflow/servicelist/" + response._id);
+                // $location.path("bookingflow/servicelist/" + response._id);
+                console.log("anything, anybody?");
+                angular.element(document.querySelector( '#listWrap'+serviceId ) ).addClass("hidden");
+                angular.element(document.querySelector( '#selected'+serviceId ) ).text("Selected during " + startDate + " to " + endDate + " for " + amount + " guests").removeClass("hidden");
             });
 
         });

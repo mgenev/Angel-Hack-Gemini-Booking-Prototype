@@ -1,13 +1,23 @@
 <section data-ng-controller="BookingFlowController" data-ng-init="findServices();findOneReservation()">
+<div class="select-resorts" >
+  <div class="container ">
+  <div class="row">
+    Select your resorts
+  </div>
+</div>
     <div class="servicelist">
         <ul class="resorts unstyled">
             <li data-ng-repeat="service in services">
-              
+                
+                
                     <span>{{service.title}}</span>
+                    <span id="selected{{service._id}}" class="hidden"></span>
+
+                    <div id="listWrap{{service._id}}">
                     <div>{{service.serviceType}}</div>
                     <div>{{service.content}}</div>
                     <img src="{{service.thumbnailUrl}}">
-                  
+
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="serviceDetails($event)">ViewDetails</div>
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
                     <!-- if this div doesn't follow the previois, the ui will break -->
@@ -26,19 +36,28 @@
                                         <input type="date" id="endDate{{service._id}}" id="endDate" class="form-control" placeholder="End Date" />
                                     </div>
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label class="control-label" for="amount">How many?</label>
                                     <div class="controls">
                                         <input type="number" id="amount{{service._id}}" id="amount" class="form-control" placeholder="amount" />
                                     </div>
                                 </div>
-                                <div class="btn btn-base btn-dark" ng-click="postServiceDates()" >Continue</div>
+                                <div class="btn btn-base btn-dark" ng-click="postServiceDates()">Continue</div>
                             </div>
                         </div>
                     </div>
+                </div>
             </li>
         </ul>
         <h1 data-ng-hide="!services || services.length">No resorts match
             <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
     </div>
+
+    <div id="footer" class="container">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-inner navbar-content-center">
+        Finish your booking
+        </div>
+    </nav>
+</div>
 </section>
