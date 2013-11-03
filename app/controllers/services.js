@@ -79,7 +79,7 @@ exports.show = function(req, res) {
  * List of Services
  */
 exports.all = function(req, res) {
-    Service.find().sort('-created').populate('user', 'name username').exec(function(err, services) {
+    Service.find().sort('-created').populate('client', 'name address').exec(function(err, services) {
         if (err) {
             res.render('error', {
                 status: 500

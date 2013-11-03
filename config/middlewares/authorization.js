@@ -1,3 +1,5 @@
+var userIsAdmin = require('./admins.js').userIsAdmin;
+
 /**
  * Generic require login routing middleware
  */
@@ -37,7 +39,7 @@ exports.article = {
  */
 exports.client = {
     hasAuthorization: function(req, res, next) {
-        if (req.client.user.id != req.user.id) {
+        if (!userIsAdmin(req.user.email)) {
             return res.send(401, 'User is not authorized');
         }
         next();

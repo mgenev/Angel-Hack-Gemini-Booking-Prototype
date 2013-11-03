@@ -80,6 +80,7 @@ module.exports = function(app, passport, auth) {
     app.get('/clients/:clientId', clients.show);
     app.put('/clients/:clientId', auth.requiresLogin, auth.client.hasAuthorization, clients.update);
     app.del('/clients/:clientId', auth.requiresLogin, auth.client.hasAuthorization, clients.destroy);
+    app.del('/clients', auth.requiresLogin, auth.client.hasAuthorization, clients.destroyAll);
 
     //Finish with setting up the articleId param
     app.param('clientId', clients.client);

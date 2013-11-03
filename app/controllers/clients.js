@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Find article by id
+ * Find client by id
  */
 exports.client = function(req, res, next, id) {
     Client.load(id, function(err, client) {
@@ -20,7 +20,7 @@ exports.client = function(req, res, next, id) {
 };
 
 /**
- * Create a article
+ * Create a client
  */
 exports.create = function(req, res) {
     var client = new Client(req.body);
@@ -39,7 +39,7 @@ exports.create = function(req, res) {
 };
 
 /**
- * Update a article
+ * Update a client
  */
 exports.update = function(req, res) {
     var client = req.client;
@@ -47,17 +47,6 @@ exports.update = function(req, res) {
     client = _.extend(client, req.body);
 
     client.save(function(err) {
-        res.jsonp(client);
-    });
-};
-
-/**
- * Delete an article
- */
-exports.destroy = function(req, res) {
-    var client = req.client;
-
-    client.remove(function(err) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -69,17 +58,58 @@ exports.destroy = function(req, res) {
 };
 
 /**
- * Show an article
+ * Delete an client
+ */
+exports.destroy = function(req, res, next) {
+    var client = req.client;
+    console.log('DELETING CLIENT: ' + client);
+
+    client.remove(function(err) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(client);
+        }
+    });
+
+    next();
+};
+
+/**
+ * Delete all clients
+ */
+exports.destroyAll = function(req, res) {
+    console.log('DELETING ALL CLIENTS');
+
+    Client.find().exec(function(err, clients) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            for (var i = 0; i < clients.length; i++) {
+                // LATER - remove callback from remove method
+                clients[i].remove();
+            }
+            res.jsonp(200);
+        }
+    });
+};
+
+/**
+ * Show an client
  */
 exports.show = function(req, res) {
     res.jsonp(req.client);
 };
 
 /**
- * List of Articles
+ * List of Clients
  */
 exports.all = function(req, res) {
-    Client.find().sort('-created').populate('user', 'name username').exec(function(err, clients) {
+    Client.find().sort('-created').exec(function(err, clients) { //.populate('user', 'name username').exec(function(err, clients) {
         if (err) {
             res.render('error', {
                 status: 500

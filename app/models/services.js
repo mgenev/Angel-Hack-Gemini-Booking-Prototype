@@ -24,6 +24,10 @@ var ServiceSchema = new Schema({
         default: 'resort',
         trim: true
     },
+    address: {
+        type: Schema.ObjectId,
+        ref: 'Client.address'
+    },
     thumbnailUrl: {
         type: String,
         default: 'http://placehold.it/300x200'
