@@ -26,7 +26,7 @@ exports.create = function(req, res) {
     var service = new Service(req.body);
     service.user = req.user;
 
-    service.save(function(err) {
+    service.save(function(err, service) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
@@ -64,6 +64,27 @@ exports.destroy = function(req, res) {
             });
         } else {
             res.jsonp(service);
+        }
+    });
+};
+
+/**
+ * Delete all services
+ */
+exports.destroyAll = function(req, res) {
+    console.log('DELETING ALL SERVICES');
+
+    Service.find().exec(function(err, services) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            for (var i = 0; i < services.length; i++) {
+                // LATER - remove callback from remove method
+                services[i].remove();
+            }
+            res.jsonp(200);
         }
     });
 };
