@@ -19,6 +19,16 @@ angular.module('mean.bookingflow').factory("Services", ['$resource', function($r
     });
 }]);
 
+angular.module('mean.bookingflow').factory("ServicesByType", ['$resource', function($resource) {
+    return $resource('servicesbytype/:serviceType', {
+        serviceType: '@serviceType'
+    }, {
+        update: {
+            method: 'PUT'
+        }
+    });
+}]);
+
 angular.module('mean.bookingflow').factory("Clients", ['$resource', function($resource) {
     return $resource('clients/:clientId', {
         clientId: '@_id'

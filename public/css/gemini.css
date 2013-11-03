@@ -5564,5 +5564,5 @@ body {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000336}}
 .finish-booking {
   height: 40px;
-  background-color: green;
+  cursor: pointer;
 }

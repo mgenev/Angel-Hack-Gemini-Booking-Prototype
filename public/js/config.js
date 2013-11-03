@@ -59,6 +59,9 @@ window.app.config(['$routeProvider',
         when('/bookingflow/servicelist/:reservationId', {
             templateUrl: 'views/bookingflow/servicelist.html'
         }).
+        when('/bookingflow/serviceactivitylist/:reservationId', {
+            templateUrl: 'views/bookingflow/serviceActivitylist.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).

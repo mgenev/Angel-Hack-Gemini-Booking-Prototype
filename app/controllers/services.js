@@ -102,6 +102,22 @@ exports.show = function(req, res) {
     res.jsonp(req.service);
 };
 
+exports.byType = function(req, res) {
+    console.log(req.params);
+   Service.find({
+            serviceType: req.params.serviceType
+        }).sort('-name').exec(function(err, services) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(services);
+        }
+    });
+};
+
+
 /**
  * List of Services
  */

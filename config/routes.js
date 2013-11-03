@@ -99,6 +99,7 @@ module.exports = function(app, passport, auth) {
     //Service Routes
     var services = require('../app/controllers/services');
     app.get('/services', services.all);
+    app.get('/servicesbytype/:serviceType', services.byType);
     app.post('/services', auth.requiresLogin, services.create);
     app.get('/services/:serviceId', services.show);
     app.put('/services/:serviceId', auth.requiresLogin, auth.service.hasAuthorization, services.update);

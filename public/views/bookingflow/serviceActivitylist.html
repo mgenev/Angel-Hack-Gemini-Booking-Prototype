@@ -1,6 +1,6 @@
-<section data-ng-controller="BookingFlowController" data-ng-init="findResortServices(); findOneReservation()">
+<section data-ng-controller="BookingFlowController" data-ng-init="findActivityServices();findOneReservation()">
 
-    <h2>Select your resorts</h2>
+    <h1>Select Activities</h1>
     <div class="servicelist">
         <ul class="resorts unstyled">
             <li data-ng-repeat="service in services">
@@ -49,7 +49,7 @@
             <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
     </div>
 
-    <div id="footer" class="finish-booking container" ng-click="changeToSelectActivity()">
+    <div id="footer" class="container">
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="navbar-inner navbar-content-center">
         Finish your booking

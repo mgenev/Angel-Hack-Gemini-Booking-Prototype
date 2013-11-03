@@ -1,4 +1,4 @@
-angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', 'Clients', 'Services', 'Users', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
+angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', 'Clients', 'Services', 'Users', 'ServicesByType', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users, ServicesByType) {
 
     $('#startDate').pickadate();
     $('#endDate').pickadate();
@@ -26,16 +26,20 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     };
 
 
-    $scope.findServices = function() {
+    $scope.findResortServices = function() {
 
-        Services.query(function(services) {
+        ServicesByType.query({ serviceType: 'resort' }, function (services) {
+            console.log('resort services are', services);
+            $scope.services = services;         
+        });        
+    };
 
-            $scope.services = services;
-            // $scope.pickDateDestination = false;            
-            console.log($scope.services);
+    $scope.findActivityServices = function() {
 
-        });
-        
+        ServicesByType.query({ serviceType: 'activity' }, function (services) {
+            console.log('activity services are', services);
+            $scope.services = services;         
+        });        
     };
 
     $scope.create = function() {
@@ -67,7 +71,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     };
 
     $scope.postServiceDates = function () {
-         var serviceId = $scope.selectedServiceId;            
+        var serviceId = $scope.selectedServiceId;            
 
         Services.get({
             serviceId: serviceId
@@ -96,12 +100,16 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             
             reservation.$update(function(response) {
                 // $location.path("bookingflow/servicelist/" + response._id);
-                console.log("anything, anybody?");
                 angular.element(document.querySelector( '#listWrap'+serviceId ) ).addClass("hidden");
                 angular.element(document.querySelector( '#selected'+serviceId ) ).text("Selected during " + startDate + " to " + endDate + " for " + amount + " guests").removeClass("hidden");
+               
             });
 
         });
+    }
+
+    $scope.changeToSelectActivity = function () {
+         $location.path('bookingflow/serviceactivitylist/' + $scope.reservation._id);
     }
 
     // $scope.remove = function(reservation) {
