@@ -30,11 +30,6 @@ var ReservationSchema = new Schema({
         default: '',
         trim: true
     },
-    content: {
-        type: String,
-        default: '',
-        trim: true
-    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'
@@ -43,10 +38,10 @@ var ReservationSchema = new Schema({
 
 /**
  * Validations
- */
-ReservationSchema.path('title').validate(function(title) {
-    return title.length;
-}, 'Title cannot be blank');
+//  */
+// ReservationSchema.path('title').validate(function(title) {
+//     return title.length;
+// }, 'Title cannot be blank');
 
 /**
  * Statics
