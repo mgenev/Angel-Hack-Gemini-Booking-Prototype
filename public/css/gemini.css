@@ -1,4 +1,58 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\000031}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\000039}}
 body {
-  background-color: orange;
+  background-color: #f1f1f1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\000031}}
+.btn-base {
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\000038}}
+.btn-base:hover {
+  color: #333;
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/modules\/_headers\.scss}line{font-family:\000031}}
+.page-header--wrap {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000031}}
+#bookingGreeting {
+  background: red;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000034}}
+#bookingGreeting .page-header--wrap {
+  min-height: 250px;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000038}}
+#bookingGreeting .page-header--wrap h1 {
+  font-weight: 200;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jakechapman\/Sites\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000319}}
+.v-aligner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }

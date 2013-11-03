@@ -1,0 +1,12 @@
+.btn-base {
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+
+  @include transition(all .3s ease-in-out);
+
+  &:hover {
+    color: #333;
+    background: white;
+  }
+}
