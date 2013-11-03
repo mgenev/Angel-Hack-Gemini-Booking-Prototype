@@ -2,10 +2,11 @@
     <div class="servicelist">
         <ul class="resorts unstyled">
             <li data-ng-repeat="service in services" ng-click="selectServices()">
-                <span>{{services.name}}</span>
+                <span>{{service.title}}</span>
                 <!-- <h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a>
                     </h2> -->
                 <div>{{service.serviceType}}</div>
+                <div>{{service.content}}</div>
                 <img src="{{service.thumbnailUrl}}">
             </li>
         </ul>

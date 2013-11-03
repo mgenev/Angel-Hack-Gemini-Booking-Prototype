@@ -73,7 +73,7 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
-    //Article Routes
+    //Client Routes
     var clients = require('../app/controllers/clients');
     app.get('/clients', clients.all);
     app.post('/clients', auth.requiresLogin, clients.create);
