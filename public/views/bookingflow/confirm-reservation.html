@@ -1,21 +1,19 @@
 <section data-ng-controller="BookingFlowController" data-ng-init="findOneReservation()">
 
     <h1>Please review your booking</h1>
-    <div> Your res {{reservation.services}}</div>
     <div class="servicelist">
         <ul class="resorts unstyled">
             <li data-ng-repeat="service in reservation.services">
-                    <span>the service {{service}}</span>
-                    <span>{{service.service.title}}</span>
+                    <span>{{service.service.title}} from {{ service.startDate }} to {{ service.endDate }} for {{service.amount}}</span>
                     <span id="selected{{service.service._id}}" class="hidden"></span>
 
                     <div id="listWrap{{service._id}}">
                     <div>{{service.serviceType}}</div>
                     <div>{{service.content}}</div>
-                    <img width="100px" src="{{service.thumbnailUrl}}">
+                    <img width="100px" src="{{service.service.thumbnailUrl}}">
 
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="serviceDetails($event)">ViewDetails</div>
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
+ <!--                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="serviceDetails($event)">ViewDetails</div>
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div> -->
                     <!-- if this div doesn't follow the previois, the ui will break -->
                 </div>
             </li>
