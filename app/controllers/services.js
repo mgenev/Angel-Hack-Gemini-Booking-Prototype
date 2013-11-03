@@ -28,10 +28,14 @@ exports.service = function(req, res, next, id) {
 
 exports.create = function(req, res) {
     var service = new Service(req.body);
-    service.client = req.client;
+    console.log("service client is: ", service.client.toString());    
+    service.client = mongoose.Types.ObjectId(service.client.toString());
+
+    console.log("service client is: ", service.client);
 
     service.save(function(err, service) {
         if (err) {
+            console.log("save is erroring out", err);
             return res.send('users/signup', {
                 errors: err.errors,
                 service: service
