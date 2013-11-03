@@ -20,15 +20,10 @@ var ReservationSchema = new Schema({
     endDate: {
         type: Date
     },
-    activities: {
+    services: {
         type: Array,
         default: [ {} ], // array of { servicesId: ref, daterange: [ startDate, endDate ] }
         ref: 'Activity'
-    },
-    title: {
-        type: String,
-        default: '',
-        trim: true
     },
     destination: {
         type: String,
