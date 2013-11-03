@@ -1,5 +1,6 @@
 .btn-base {
-  border: 2px solid white;
+  border: 1px solid white;
+  font-weight: 200;
   text-align: center;
   color: white;
 
@@ -8,5 +9,15 @@
   &:hover {
     color: #333;
     background: white;
+  }
+
+  &.btn-dark {
+    border-color: #333;
+    color: #333;
+
+    &:hover {
+      background: #333;
+      color: white;
+    }
   }
 }
