@@ -103,6 +103,7 @@ module.exports = function(app, passport, auth) {
     app.get('/services/:serviceId', services.show);
     app.put('/services/:serviceId', auth.requiresLogin, auth.service.hasAuthorization, services.update);
     app.del('/services/:serviceId', auth.requiresLogin, auth.service.hasAuthorization, services.destroy);
+    app.del('/services', auth.requiresLogin, auth.service.hasAuthorization, services.destroyAll);
 
     //Finish with setting up the serviceId param
     // app.param('serviceId', services.service);
