@@ -106,7 +106,7 @@ module.exports = function(app, passport, auth) {
     app.del('/services', auth.requiresLogin, auth.service.hasAuthorization, services.destroyAll);
 
     //Finish with setting up the serviceId param
-    // app.param('serviceId', services.service);
+     app.param('serviceId', services.service);
 
 
     //Home route

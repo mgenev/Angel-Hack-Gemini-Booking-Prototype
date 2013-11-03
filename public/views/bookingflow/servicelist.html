@@ -1,10 +1,9 @@
-<section data-ng-controller="BookingFlowController" data-ng-init="findServices()">
+<section data-ng-controller="BookingFlowController" data-ng-init="findServices();findOneReservation()">
     <div class="servicelist">
         <ul class="resorts unstyled">
-            <li data-ng-repeat="service in services" ng-click="selectServices()">
-                <span>{{service.title}}</span>
-                <!-- <h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a>
-                    </h2> -->
+            <li data-ng-repeat="service in services" >
+                <span id="{{service._id}}" ng-click="selectServices($event)">{{service.title}}</span>
+            
                 <div>{{service.serviceType}}</div>
                 <div>{{service.content}}</div>
                 <img src="{{service.thumbnailUrl}}">
