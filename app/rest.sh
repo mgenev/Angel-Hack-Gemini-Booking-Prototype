@@ -1,2 +1,5 @@
 #!/bin/bash
-curl $2 -b temp.txt http://127.0.0.1:3001/$1
+object=$1
+shift
+echo curl $@ -b temp.txt http://127.0.0.1:3001/$object
+curl $@ -b temp.txt http://127.0.0.1:3001/$object
