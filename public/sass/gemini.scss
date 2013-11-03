@@ -52,8 +52,22 @@ body {
 }
 
 .finish-booking {
-	height:40px;
+	height:18%;
 	
-	cursor: pointer;
+	//cursor: pointer;
+	clear: both;
+    position: fixed;
+	top: 83%;
+    text-align: center;
+    background-color: white;
+	padding-top: 2%;
+	padding-right: 500px;
+	border-top: solid 2px black;
 }
 
+.finish-booking-button {
+    position: fixed;
+	left: 20%;
+	padding: 5%;
+	font-size: 170%;
+}

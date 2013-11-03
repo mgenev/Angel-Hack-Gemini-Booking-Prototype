@@ -5544,42 +5544,62 @@ body {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000321}}
+.green {
+  color: green;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000325}}
 .v-aligner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000331}}
 .hidden {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000335}}
 .signin, .signup {
   margin-left: 19px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000339}}
 .form-action-buttons {
   text-align: center;
   clear: both;
   margin-left: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000345}}
 .unstyled {
   list-style-type: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000349}}
 .select-resorts {
   background-color: green;
   height: 40px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000354}}
 .finish-booking {
-  height: 40px;
-  cursor: pointer;
+  height: 18%;
+  clear: both;
+  position: fixed;
+  top: 83%;
+  text-align: center;
+  background-color: white;
+  padding-top: 2%;
+  padding-right: 500px;
+  border-top: solid 2px black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000368}}
+.finish-booking-button {
+  position: fixed;
+  left: 20%;
+  padding: 5%;
+  font-size: 170%;
 }
