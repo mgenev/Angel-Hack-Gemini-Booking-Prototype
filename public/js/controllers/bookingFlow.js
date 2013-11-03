@@ -49,7 +49,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             destination: this.destination
         });
         reservation.$save(function(response) {
-            $location.path("bookingflow/servicelist/" + response._id);
+            $location.path("bookingflow/service-lodging-list/" + response._id);
         });
 
         this.startDate = "";
@@ -109,7 +109,12 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     }
 
     $scope.changeToSelectActivity = function () {
+
         $location.path('bookingflow/service-activity-list/' + $scope.reservation._id);
+    }
+
+    $scope.changeToSelectLodging = function () {
+        $location.path('bookingflow/service-lodging-list/' + $scope.reservation._id);
     }
 
     $scope.gotoConfirm = function () {
@@ -120,9 +125,16 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         $location.path('bookingflow/finished/' + $scope.reservation._id);      
     }
 
-    $scope.serviceDetails = function (e) {
+    $scope.lodgingServiceDetails = function (e) {
+        $scope.selectedServiceId = e.srcElement.id
+        console.log("lodgingServiceDetails fired");
+        $location.path('bookingflow/lodging-service-detail/'+ $scope.selectedServiceId + "/" + $scope.reservation._id);         
+    }
+
+    $scope.activityServiceDetails = function (e) {
         $scope.selectedServiceId = e.srcElement.id;
-        $location.path('bookingflow/service-detail/'+ $scope.selectedServiceId + "/" + $scope.reservation._id);         
+        console.log("activityServiceDetails fired");
+        $location.path('bookingflow/activity-service-detail/'+ $scope.selectedServiceId + "/" + $scope.reservation._id);         
     }
 
     // $scope.removeService = function(reservation) {

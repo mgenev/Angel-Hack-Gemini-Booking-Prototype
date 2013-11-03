@@ -14,7 +14,7 @@
                     <div>{{service.content}}</div>
                     <img width="100px" src="{{service.thumbnailUrl}}">
 
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="serviceDetails($event)">ViewDetails</div>
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="activityServiceDetail($event)">ViewDetails</div>
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
                     <!-- if this div doesn't follow the previois, the ui will break -->
                     <div class="hidden">
@@ -38,7 +38,7 @@
                                         <input type="number" id="amount{{service._id}}" id="amount" class="form-control" placeholder="amount" />
                                     </div>
                                 </div>
-                                <div class="btn btn-base btn-dark" ng-click="postServiceDates()">Continue</div>
+                                <div class="btn btn-base btn-dark" ng-click="postServiceDates()">Book</div>
                             </div>
                         </div>
                     </div>

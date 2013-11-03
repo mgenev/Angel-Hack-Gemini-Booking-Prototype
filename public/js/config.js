@@ -56,11 +56,14 @@ window.app.config(['$routeProvider',
         when('/bookingflow/datedestination', {
             templateUrl: 'views/bookingflow/datedestination.html'
         }).
-        when('/bookingflow/servicelist/:reservationId', {
-            templateUrl: 'views/bookingflow/servicelist.html'
+        when('/bookingflow/service-lodging-list/:reservationId', {
+            templateUrl: 'views/bookingflow/service-lodging-list.html'
         }).
-        when('/bookingflow/service-detail/:serviceId/:reservationId', {
-            templateUrl: 'views/bookingflow/service-detail.html'
+        when('/bookingflow/lodging-service-detail/:serviceId/:reservationId', {
+            templateUrl: 'views/bookingflow/lodging-service-detail.html'
+        }).
+        when('/bookingflow/activity-service-detail/:serviceId/:reservationId', {
+            templateUrl: 'views/bookingflow/activity-service-detail.html'
         }).
         when('/bookingflow/service-activity-list/:reservationId', {
             templateUrl: 'views/bookingflow/service-activity-list.html'            
