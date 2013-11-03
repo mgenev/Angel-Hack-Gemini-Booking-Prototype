@@ -23,9 +23,6 @@ exports.service = function(req, res, next, id) {
 /**
  * Create a service
  */
-
-
-
 exports.create = function(req, res) {
     var service = new Service(req.body);
     console.log("service client is: ", service.client.toString());    
@@ -34,6 +31,7 @@ exports.create = function(req, res) {
     console.log("service client is: ", service.client);
 
     service.save(function(err, service) {
+        //console.log('saving: ' + JSON.stringify(service));
         if (err) {
             console.log("save is erroring out", err);
             return res.send('users/signup', {

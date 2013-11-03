@@ -63,7 +63,7 @@ ServiceSchema.path('title').validate(function(title) {
 }, 'Title cannot be blank');
 
 ServiceSchema.path('serviceType').validate(function(serviceType) {
-    return serviceType === 'resort' || serviceType === 'activity' || serviceType === '';
+    return serviceType === 'lodging' || serviceType === 'activity' || serviceType === '';
 }, 'Title cannot be blank');
 
 /**
