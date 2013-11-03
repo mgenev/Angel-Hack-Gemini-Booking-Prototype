@@ -1,0 +1,13 @@
+ <div class="servicelist">
+        <ul class="resorts unstyled">
+            <li data-ng-repeat="client in clients">
+                <span>{{client.name}}</span>
+                <!-- <h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a>
+                </h2> -->
+                <div>{{client.type}}</div>
+                <div>{{client.address}}</div>
+            </li>
+        </ul>
+        <h1 data-ng-hide="!clients || clients.length">No resorts match 
+            <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
+</div>

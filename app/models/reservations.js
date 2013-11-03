@@ -14,17 +14,18 @@ var ReservationSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    title: {
-        type: String,
-        default: '',
-        trim: true
+    startDate: {
+        type: Date
     },
-    activities: {
+    endDate: {
+        type: Date
+    },
+    services: {
         type: Array,
-        default: [],
+        default: [ {} ], // array of { servicesId: ref, daterange: [ startDate, endDate ] }
         ref: 'Activity'
     },
-    content: {
+    destination: {
         type: String,
         default: '',
         trim: true
@@ -37,10 +38,10 @@ var ReservationSchema = new Schema({
 
 /**
  * Validations
- */
-ReservationSchema.path('title').validate(function(title) {
-    return title.length;
-}, 'Title cannot be blank');
+//  */
+// ReservationSchema.path('title').validate(function(title) {
+//     return title.length;
+// }, 'Title cannot be blank');
 
 /**
  * Statics

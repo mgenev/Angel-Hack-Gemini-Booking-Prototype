@@ -1,31 +1,46 @@
-angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
+angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', 'Clients', 'Services', 'Users', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
+
     $scope.global = Global;
     $scope.reservation = {};
 
+    $scope.pickDateDestination = true;
+    $scope.resortList = false;
+
+
+
+
+   
     $scope.start = function () {
-        $location.path("bookingflow/date-location" );
+        $location.path("bookingflow/datedestination" );        
     }
 
-    $scope.pickDateDestination = function () {
-        $scope.reservation.destination = this.destination;
-        $scope.reservation.start = this.start;
-        $scope.reservation.end = this.end;
+    $scope.findClients = function() {
 
-        console.log($scope.reservation);
-    }
+        Clients.query(function(clients) {
 
-    // $scope.create = function() {
-    //     var reservation = new Reservations({
-    //         title: this.title,
-    //         content: this.content
-    //     });
-    //     reservation.$save(function(response) {
-    //         $location.path("reservations/" + response._id);
-    //     });
+            $scope.clients = clients;
+            // $scope.pickDateDestination = false;
+            $scope.resortList = true;
+            console.log($scope.clients);
 
-    //     this.title = "";
-    //     this.content = "";
-    // };
+        });
+        
+    };
+
+    $scope.create = function() {
+        var reservation = new Reservations({
+            startDate: this.startDate,
+            endDate: this.endDate,
+            destination: this.destination
+        });
+        reservation.$save(function(response) {
+            $location.path("bookingflow/servicelist" + response._id);
+        });
+
+        this.startDate = "";
+        this.endDate = "";
+        this.destination = "";
+    };
 
     // $scope.remove = function(reservation) {
     //     reservation.$remove();  

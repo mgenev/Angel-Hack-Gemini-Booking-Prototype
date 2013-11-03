@@ -41,8 +41,11 @@ window.app.config(['$routeProvider',
         when('/bookingflow', {
             templateUrl: 'views/bookingflow/greeting.html'
         }).
-        when('/bookingflow/date-location', {
-            templateUrl: 'views/bookingflow/date_location.html'
+        when('/bookingflow/datedestination', {
+            templateUrl: 'views/bookingflow/datedestination.html'
+        }).
+        when('/bookingflow/servicelist', {
+            templateUrl: 'views/bookingflow/servicelist.html'
         }).
         when('/', {
             templateUrl: 'views/index.html'
