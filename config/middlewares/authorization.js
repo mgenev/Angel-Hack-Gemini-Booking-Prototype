@@ -64,7 +64,7 @@ exports.reservation = {
  */
 exports.service = {
     hasAuthorization: function(req, res, next) {
-        if (req.service.user.id != req.user.id) {
+        if (!userIsAdmin(req.user.email)) {
             return res.send(401, 'User is not authorized');
         }
         next();
