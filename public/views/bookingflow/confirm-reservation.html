@@ -1,6 +1,10 @@
 <section data-ng-controller="BookingFlowController" data-ng-init="findOneReservation();">
-
+<div class="container">
     <h1>Please review your booking</h1>
+    <p>Your trip to {{reservation.destination}} is from {{reservation.startDate | date:'mediumDate'}} to {{reservation.endDate | date:'mediumDate'}}</p>
+    <p>
+    Your individual lodgings and activities are:
+    </p>
     <div class="servicelist">
         <ul class="resorts unstyled">
             <li data-ng-repeat="service in reservation.services">
@@ -30,5 +34,6 @@
         Finalize your booking
         </div>
     </nav>
+</div>
 </div>
 </section>

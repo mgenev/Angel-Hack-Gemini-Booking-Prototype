@@ -57,10 +57,14 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         };
 
         $scope.create = function() {
+
+            var startDate = angular.element(document.querySelector('#startDate')).val();
+            var endDate = angular.element(document.querySelector('#endDate')).val();
+
             var reservation = new Reservations({
-                startDate: this.startDate,
-                endDate: this.endDate,
-                destination: this.destination
+                startDate: startDate,
+                endDate: endDate,
+                destination: $scope.destination
             });
             reservation.$save(function(response) {
                 $location.path("bookingflow/service-lodging-list/" + response._id);
