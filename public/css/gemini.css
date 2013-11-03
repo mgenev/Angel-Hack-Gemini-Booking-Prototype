@@ -1,0 +1,5585 @@
+@charset "UTF-8";
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\000031}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\000039}}
+body {
+  background-color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\000031}}
+.btn-base {
+  border: 1px solid white;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\000039}}
+.btn-base:hover {
+  color: #333;
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\0000314}}
+.btn-base.btn-dark {
+  border-color: #333;
+  color: #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/modules\/_buttons\.scss}line{font-family:\0000318}}
+.btn-base.btn-dark:hover {
+  background: #333;
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/modules\/_headers\.scss}line{font-family:\000031}}
+.page-header--wrap {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000031}}
+#bookingGreeting {
+  background: red;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000034}}
+#bookingGreeting .page-header--wrap {
+  min-height: 250px;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\000038}}
+#bookingGreeting .page-header--wrap h1 {
+  font-weight: 200;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/pages\/_greetings\.scss}line{font-family:\0000315}}
+.delay-short {
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  -ms-animation-delay: .5s;
+  -o-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+/* ==========================================================================
+   $BASE-PICKER
+   ========================================================================== */
+/**
+ * Note: the root picker element should __NOT__ be styled
+ * more than what’s here. Style the `.picker__holder` instead.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\000038}}
+.picker {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.2;
+  color: #000000;
+  position: absolute;
+  z-index: 10000;
+}
+
+/**
+ * The picker input element.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000319}}
+.picker__input {
+  cursor: default;
+}
+
+/**
+ * When the picker is opened, the input element is “activated”.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000325}}
+.picker__input.picker__input--active {
+  border-color: #0089ec;
+}
+
+/**
+ * The holder is the only “scrollable” top-level container element.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000331}}
+.picker__holder {
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Classic picker styling for pickadate.js
+ * Demo: http://amsul.github.io/pickadate.js
+ */
+/**
+ * Note: the root picker element should __NOT__ be styled
+ * more than what’s here. Style the `.picker__holder` instead.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000345}}
+.picker {
+  width: 100%;
+}
+
+/**
+ * The holder is the base of the picker.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000351}}
+.picker__holder {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 176px;
+  max-width: 466px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  max-height: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+  -moz-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+  transform: translateY(-1em) perspective(600px) rotateX(10deg);
+  -webkit-transition: all 0.15s ease-out, max-height 0 0.15s;
+  -moz-transition: all 0.15s ease-out, max-height 0 0.15s;
+  transition: all 0.15s ease-out, max-height 0 0.15s;
+}
+
+/**
+ * When the picker opens...
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\0000378}}
+.picker--opened .picker__holder {
+  max-height: 25em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+  -moz-transform: translateY(0) perspective(600px) rotateX(0);
+  transform: translateY(0) perspective(600px) rotateX(0);
+  -webkit-transition: all 0.15s ease-out, max-height 0;
+  -moz-transition: all 0.15s ease-out, max-height 0;
+  transition: all 0.15s ease-out, max-height 0;
+  -webkit-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   $BASE-DATE-PICKER
+   ========================================================================== */
+/**
+ * The picker box.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003103}}
+.picker__box {
+  padding: 0 1em;
+}
+
+/**
+ * The header containing the month and year stuff.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003109}}
+.picker__header {
+  text-align: center;
+  position: relative;
+  margin-top: .75em;
+}
+
+/**
+ * The month and year labels.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003118}}
+.picker__month,
+.picker__year {
+  font-weight: 500;
+  display: inline-block;
+  margin-left: .25em;
+  margin-right: .25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003124}}
+.picker__year {
+  color: #999999;
+  font-size: .8em;
+  font-style: italic;
+}
+
+/**
+ * The month and year selectors.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003133}}
+.picker__select--month,
+.picker__select--year {
+  font-size: .8em;
+  border: 1px solid #b7b7b7;
+  height: 2.5em;
+  padding: .5em .25em;
+  margin-left: .25em;
+  margin-right: .25em;
+  margin-top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003142}}
+.picker__select--month {
+  width: 35%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003145}}
+.picker__select--year {
+  width: 22.5%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003149}}
+.picker__select--month:focus,
+.picker__select--year:focus {
+  border-color: #0089ec;
+}
+
+/**
+ * The month navigation buttons.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003156}}
+.picker__nav--prev,
+.picker__nav--next {
+  position: absolute;
+  top: -0.33em;
+  padding: .5em 1.33em;
+  width: 1em;
+  height: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003163}}
+.picker__nav--prev {
+  left: -1em;
+  padding-right: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003167}}
+.picker__nav--next {
+  right: -1em;
+  padding-left: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003172}}
+.picker__nav--prev:before,
+.picker__nav--next:before {
+  content: " ";
+  border-top: .5em solid transparent;
+  border-bottom: .5em solid transparent;
+  border-right: 0.75em solid #000000;
+  width: 0;
+  height: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003182}}
+.picker__nav--next:before {
+  border-right: 0;
+  border-left: 0.75em solid #000000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003187}}
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  cursor: pointer;
+  color: #000000;
+  background: #b1dcfb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003195}}
+.picker__nav--disabled,
+.picker__nav--disabled:hover,
+.picker__nav--disabled:before,
+.picker__nav--disabled:before:hover {
+  cursor: default;
+  background: none;
+  border-right-color: #f5f5f5;
+  border-left-color: #f5f5f5;
+}
+
+/**
+ * The calendar table of dates
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003204}}
+.picker__table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: inherit;
+  width: 100%;
+  margin-top: .75em;
+  margin-bottom: .5em;
+}
+
+@media (min-height: 33.875em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003215}}
+  .picker__table {
+    margin-bottom: .75em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003219}}
+.picker__table td {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * The weekday labels
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003226}}
+.picker__weekday {
+  width: 14.285714286%;
+  font-size: .75em;
+  padding-bottom: .25em;
+  color: #999999;
+  font-weight: 500;
+  /* Increase the spacing a tad */
+}
+
+@media (min-height: 33.875em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003236}}
+  .picker__weekday {
+    padding-bottom: .5em;
+  }
+}
+/**
+ * The days on the calendar
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003243}}
+.picker__day {
+  padding: .3125em 0;
+  font-weight: 200;
+  border: 1px solid transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003248}}
+.picker__day--today {
+  color: #0089ec;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003252}}
+.picker__day--today:before {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 0;
+  height: 0;
+  border-top: 0.5em solid #0059bc;
+  border-left: .5em solid transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003263}}
+.picker__day--selected,
+.picker__day--selected:hover {
+  border-color: #0089ec;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003266}}
+.picker__day--highlighted {
+  background: #b1dcfb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003269}}
+.picker__day--disabled:before {
+  border-top-color: #aaaaaa;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003272}}
+.picker__day--outfocus {
+  color: #dddddd;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003276}}
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  cursor: pointer;
+  color: #000000;
+  background: #b1dcfb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003282}}
+.picker__day--highlighted:hover,
+.picker--focused .picker__day--highlighted {
+  background: #0089ec;
+  color: #ffffff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003287}}
+.picker__day--disabled,
+.picker__day--disabled:hover {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  color: #dddddd;
+  cursor: default;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003294}}
+.picker__day--highlighted.picker__day--disabled,
+.picker__day--highlighted.picker__day--disabled:hover {
+  background: #bbbbbb;
+}
+
+/**
+ * The footer containing the "today" and "clear" buttons.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003300}}
+.picker__footer {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003304}}
+.picker__button--today,
+.picker__button--clear {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  font-size: .8em;
+  padding: .66em 0;
+  font-weight: bold;
+  width: 50%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003315}}
+.picker__button--today:hover,
+.picker__button--clear:hover {
+  cursor: pointer;
+  color: #000000;
+  background: #b1dcfb;
+  border-bottom-color: #b1dcfb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003322}}
+.picker__button--today:focus,
+.picker__button--clear:focus {
+  background: #b1dcfb;
+  border-color: #0089ec;
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003328}}
+.picker__button--today:before,
+.picker__button--clear:before {
+  position: relative;
+  display: inline-block;
+  height: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003333}}
+.picker__button--today:before {
+  content: " ";
+  margin-right: .45em;
+  top: -0.05em;
+  width: 0;
+  border-top: 0.66em solid #0059bc;
+  border-left: .66em solid transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003341}}
+.picker__button--clear:before {
+  content: "\D7";
+  margin-right: .35em;
+  top: -0.1em;
+  color: #ee2200;
+  vertical-align: top;
+  font-size: 1.1em;
+}
+
+/* ==========================================================================
+   $CLASSIC-DATE-PICKER
+   ========================================================================== */
+/* ==========================================================================
+   $BASE-TIME-PICKER
+   ========================================================================== */
+/**
+ * The list of times.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003363}}
+.picker__list {
+  list-style: none;
+  padding: 0.75em 0 4.2em;
+  margin: 0;
+}
+
+/**
+ * The times on the clock.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003371}}
+.picker__list-item {
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  margin-bottom: -1px;
+  position: relative;
+  background: #ffffff;
+  padding: .75em 1.25em;
+}
+
+@media (min-height: 46.75em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003380}}
+  .picker__list-item {
+    padding: .5em 1em;
+  }
+}
+/* Hovered time */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003385}}
+.picker__list-item:hover {
+  cursor: pointer;
+  color: #000000;
+  background: #b1dcfb;
+  border-color: #0089ec;
+  z-index: 10;
+}
+
+/* Selected time */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003394}}
+.picker__list-item--selected,
+.picker__list-item--selected:hover {
+  border-color: #0089ec;
+  z-index: 10;
+}
+
+/* Highlighted time */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003399}}
+.picker__list-item--highlighted {
+  background: #b1dcfb;
+}
+
+/* Highlighted and hovered/focused time */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003404}}
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+  background: #0089ec;
+  color: #ffffff;
+}
+
+/* Disabled time */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003411}}
+.picker__list-item--disabled,
+.picker__list-item--disabled:hover,
+.picker--focused .picker__list-item--disabled {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  color: #dddddd;
+  cursor: default;
+  border-color: #dddddd;
+  z-index: auto;
+}
+
+/**
+ * The clear button
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003422}}
+.picker--time .picker__button--clear {
+  display: block;
+  width: 80%;
+  margin: 1em auto 0;
+  padding: 1em 1.25em;
+  background: none;
+  border: 0;
+  font-weight: 500;
+  font-size: .67em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #666;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003436}}
+.picker--time .picker__button--clear:hover,
+.picker--time .picker__button--clear:focus {
+  color: #000000;
+  background: #b1dcfb;
+  background: #ee2200;
+  border-color: #ee2200;
+  cursor: pointer;
+  color: #ffffff;
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003445}}
+.picker--time .picker__button--clear:before {
+  top: -0.25em;
+  color: #666;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003452}}
+.picker--time .picker__button--clear:hover:before,
+.picker--time .picker__button--clear:focus:before {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   $CLASSIC-TIME-PICKER
+   ========================================================================== */
+/**
+ * Note: the root picker element should __NOT__ be styled
+ * more than what’s here. Style the `.picker__holder` instead.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003463}}
+.picker--time {
+  min-width: 256px;
+  max-width: 320px;
+}
+
+/**
+ * The holder is the base of the picker.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003471}}
+.picker--time .picker__holder {
+  background: #f2f2f2;
+}
+
+@media (min-height: 40.125em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003475}}
+  .picker--time .picker__holder {
+    font-size: .875em;
+  }
+}
+/**
+ * The box contains the list of times.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003482}}
+.picker--time .picker__box {
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_picker\.scss}line{font-family:\00003493}}
+.picker__holder {
+  max-width: 92%;
+}
+
+/*
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\0000314}}
+body {
+  /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+  -webkit-backface-visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\0000317}}
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\0000328}}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes flash {
+  /* line 36, ../sass/vendor/_animate.scss */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 37, ../sass/vendor/_animate.scss */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes flash {
+  /* line 41, ../sass/vendor/_animate.scss */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 42, ../sass/vendor/_animate.scss */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes flash {
+  /* line 46, ../sass/vendor/_animate.scss */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 47, ../sass/vendor/_animate.scss */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  /* line 51, ../sass/vendor/_animate.scss */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 52, ../sass/vendor/_animate.scss */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\0000355}}
+.animated.flash {
+  -webkit-animation-name: flash;
+  -moz-animation-name: flash;
+  -o-animation-name: flash;
+  animation-name: flash;
+}
+
+@-webkit-keyframes shake {
+  /* line 62, ../sass/vendor/_animate.scss */
+  0%, 100% {
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 63, ../sass/vendor/_animate.scss */
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+  }
+
+  /* line 64, ../sass/vendor/_animate.scss */
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+
+@-moz-keyframes shake {
+  /* line 68, ../sass/vendor/_animate.scss */
+  0%, 100% {
+    -moz-transform: translateX(0);
+  }
+
+  /* line 69, ../sass/vendor/_animate.scss */
+  10%, 30%, 50%, 70%, 90% {
+    -moz-transform: translateX(-10px);
+  }
+
+  /* line 70, ../sass/vendor/_animate.scss */
+  20%, 40%, 60%, 80% {
+    -moz-transform: translateX(10px);
+  }
+}
+
+@-o-keyframes shake {
+  /* line 74, ../sass/vendor/_animate.scss */
+  0%, 100% {
+    -o-transform: translateX(0);
+  }
+
+  /* line 75, ../sass/vendor/_animate.scss */
+  10%, 30%, 50%, 70%, 90% {
+    -o-transform: translateX(-10px);
+  }
+
+  /* line 76, ../sass/vendor/_animate.scss */
+  20%, 40%, 60%, 80% {
+    -o-transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  /* line 80, ../sass/vendor/_animate.scss */
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  /* line 81, ../sass/vendor/_animate.scss */
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+  /* line 82, ../sass/vendor/_animate.scss */
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\0000385}}
+.animated.shake {
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+}
+
+@-webkit-keyframes bounce {
+  /* line 92, ../sass/vendor/_animate.scss */
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 93, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+
+  /* line 94, ../sass/vendor/_animate.scss */
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounce {
+  /* line 98, ../sass/vendor/_animate.scss */
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+  }
+
+  /* line 99, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: translateY(-30px);
+  }
+
+  /* line 100, ../sass/vendor/_animate.scss */
+  60% {
+    -moz-transform: translateY(-15px);
+  }
+}
+
+@-o-keyframes bounce {
+  /* line 104, ../sass/vendor/_animate.scss */
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0);
+  }
+
+  /* line 105, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: translateY(-30px);
+  }
+
+  /* line 106, ../sass/vendor/_animate.scss */
+  60% {
+    -o-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  /* line 109, ../sass/vendor/_animate.scss */
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  /* line 110, ../sass/vendor/_animate.scss */
+  40% {
+    transform: translateY(-30px);
+  }
+
+  /* line 111, ../sass/vendor/_animate.scss */
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003114}}
+.animated.bounce {
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  -o-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes tada {
+  /* line 121, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 122, ../sass/vendor/_animate.scss */
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 123, ../sass/vendor/_animate.scss */
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 124, ../sass/vendor/_animate.scss */
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 125, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+  }
+}
+
+@-moz-keyframes tada {
+  /* line 129, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  /* line 130, ../sass/vendor/_animate.scss */
+  10%, 20% {
+    -moz-transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 131, ../sass/vendor/_animate.scss */
+  30%, 50%, 70%, 90% {
+    -moz-transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 132, ../sass/vendor/_animate.scss */
+  40%, 60%, 80% {
+    -moz-transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 133, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: scale(1) rotate(0);
+  }
+}
+
+@-o-keyframes tada {
+  /* line 137, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: scale(1);
+  }
+
+  /* line 138, ../sass/vendor/_animate.scss */
+  10%, 20% {
+    -o-transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 139, ../sass/vendor/_animate.scss */
+  30%, 50%, 70%, 90% {
+    -o-transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 140, ../sass/vendor/_animate.scss */
+  40%, 60%, 80% {
+    -o-transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 141, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  /* line 145, ../sass/vendor/_animate.scss */
+  0% {
+    transform: scale(1);
+  }
+
+  /* line 146, ../sass/vendor/_animate.scss */
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 147, ../sass/vendor/_animate.scss */
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 148, ../sass/vendor/_animate.scss */
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 149, ../sass/vendor/_animate.scss */
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003152}}
+.animated.tada {
+  -webkit-animation-name: tada;
+  -moz-animation-name: tada;
+  -o-animation-name: tada;
+  animation-name: tada;
+}
+
+@-webkit-keyframes swing {
+  /* line 159, ../sass/vendor/_animate.scss */
+  20%, 40%, 60%, 80%, 100% {
+    -webkit-transform-origin: top center;
+  }
+
+  /* line 160, ../sass/vendor/_animate.scss */
+  20% {
+    -webkit-transform: rotate(15deg);
+  }
+
+  /* line 161, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: rotate(-10deg);
+  }
+
+  /* line 162, ../sass/vendor/_animate.scss */
+  60% {
+    -webkit-transform: rotate(5deg);
+  }
+
+  /* line 163, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: rotate(-5deg);
+  }
+
+  /* line 164, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes swing {
+  /* line 168, ../sass/vendor/_animate.scss */
+  20% {
+    -moz-transform: rotate(15deg);
+  }
+
+  /* line 169, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: rotate(-10deg);
+  }
+
+  /* line 170, ../sass/vendor/_animate.scss */
+  60% {
+    -moz-transform: rotate(5deg);
+  }
+
+  /* line 171, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: rotate(-5deg);
+  }
+
+  /* line 172, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@-o-keyframes swing {
+  /* line 176, ../sass/vendor/_animate.scss */
+  20% {
+    -o-transform: rotate(15deg);
+  }
+
+  /* line 177, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: rotate(-10deg);
+  }
+
+  /* line 178, ../sass/vendor/_animate.scss */
+  60% {
+    -o-transform: rotate(5deg);
+  }
+
+  /* line 179, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: rotate(-5deg);
+  }
+
+  /* line 180, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: rotate(0deg);
+  }
+}
+
+@keyframes swing {
+  /* line 184, ../sass/vendor/_animate.scss */
+  20% {
+    transform: rotate(15deg);
+  }
+
+  /* line 185, ../sass/vendor/_animate.scss */
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  /* line 186, ../sass/vendor/_animate.scss */
+  60% {
+    transform: rotate(5deg);
+  }
+
+  /* line 187, ../sass/vendor/_animate.scss */
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  /* line 188, ../sass/vendor/_animate.scss */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003191}}
+.animated.swing {
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  -moz-animation-name: swing;
+  -o-animation-name: swing;
+  animation-name: swing;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes wobble {
+  /* line 204, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  /* line 205, ../sass/vendor/_animate.scss */
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 206, ../sass/vendor/_animate.scss */
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 207, ../sass/vendor/_animate.scss */
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 208, ../sass/vendor/_animate.scss */
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 209, ../sass/vendor/_animate.scss */
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 210, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes wobble {
+  /* line 214, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0%);
+  }
+
+  /* line 215, ../sass/vendor/_animate.scss */
+  15% {
+    -moz-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 216, ../sass/vendor/_animate.scss */
+  30% {
+    -moz-transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 217, ../sass/vendor/_animate.scss */
+  45% {
+    -moz-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 218, ../sass/vendor/_animate.scss */
+  60% {
+    -moz-transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 219, ../sass/vendor/_animate.scss */
+  75% {
+    -moz-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 220, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0%);
+  }
+}
+
+@-o-keyframes wobble {
+  /* line 224, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0%);
+  }
+
+  /* line 225, ../sass/vendor/_animate.scss */
+  15% {
+    -o-transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 226, ../sass/vendor/_animate.scss */
+  30% {
+    -o-transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 227, ../sass/vendor/_animate.scss */
+  45% {
+    -o-transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 228, ../sass/vendor/_animate.scss */
+  60% {
+    -o-transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 229, ../sass/vendor/_animate.scss */
+  75% {
+    -o-transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 230, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0%);
+  }
+}
+
+@keyframes wobble {
+  /* line 234, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0%);
+  }
+
+  /* line 235, ../sass/vendor/_animate.scss */
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 236, ../sass/vendor/_animate.scss */
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 237, ../sass/vendor/_animate.scss */
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 238, ../sass/vendor/_animate.scss */
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 239, ../sass/vendor/_animate.scss */
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 240, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003243}}
+.animated.wobble {
+  -webkit-animation-name: wobble;
+  -moz-animation-name: wobble;
+  -o-animation-name: wobble;
+  animation-name: wobble;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes pulse {
+  /* line 252, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 253, ../sass/vendor/_animate.scss */
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 254, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  /* line 257, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  /* line 258, ../sass/vendor/_animate.scss */
+  50% {
+    -moz-transform: scale(1.1);
+  }
+
+  /* line 259, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes pulse {
+  /* line 262, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: scale(1);
+  }
+
+  /* line 263, ../sass/vendor/_animate.scss */
+  50% {
+    -o-transform: scale(1.1);
+  }
+
+  /* line 264, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  /* line 267, ../sass/vendor/_animate.scss */
+  0% {
+    transform: scale(1);
+  }
+
+  /* line 268, ../sass/vendor/_animate.scss */
+  50% {
+    transform: scale(1.1);
+  }
+
+  /* line 269, ../sass/vendor/_animate.scss */
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003272}}
+.animated.pulse {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes flip {
+  /* line 279, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  /* line 283, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  /* line 287, ../sass/vendor/_animate.scss */
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  /* line 291, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  /* line 295, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@-moz-keyframes flip {
+  /* line 301, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -moz-animation-timing-function: ease-out;
+  }
+
+  /* line 305, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -moz-animation-timing-function: ease-out;
+  }
+
+  /* line 309, ../sass/vendor/_animate.scss */
+  50% {
+    -moz-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -moz-animation-timing-function: ease-in;
+  }
+
+  /* line 313, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -moz-animation-timing-function: ease-in;
+  }
+
+  /* line 317, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -moz-animation-timing-function: ease-in;
+  }
+}
+
+@-o-keyframes flip {
+  /* line 323, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -o-animation-timing-function: ease-out;
+  }
+
+  /* line 327, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -o-animation-timing-function: ease-out;
+  }
+
+  /* line 331, ../sass/vendor/_animate.scss */
+  50% {
+    -o-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -o-animation-timing-function: ease-in;
+  }
+
+  /* line 335, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -o-animation-timing-function: ease-in;
+  }
+
+  /* line 339, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -o-animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  /* line 345, ../sass/vendor/_animate.scss */
+  0% {
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  /* line 349, ../sass/vendor/_animate.scss */
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  /* line 353, ../sass/vendor/_animate.scss */
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+
+  /* line 357, ../sass/vendor/_animate.scss */
+  80% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+
+  /* line 361, ../sass/vendor/_animate.scss */
+  100% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003367}}
+.animated.flip {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: flip;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: flip;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: flip;
+  backface-visibility: visible !important;
+  animation-name: flip;
+}
+
+@-webkit-keyframes flipInX {
+  /* line 378, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 383, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 387, ../sass/vendor/_animate.scss */
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 391, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes flipInX {
+  /* line 397, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 402, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 406, ../sass/vendor/_animate.scss */
+  70% {
+    -moz-transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 410, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes flipInX {
+  /* line 416, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 421, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 425, ../sass/vendor/_animate.scss */
+  70% {
+    -o-transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 429, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  /* line 435, ../sass/vendor/_animate.scss */
+  0% {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 440, ../sass/vendor/_animate.scss */
+  40% {
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 444, ../sass/vendor/_animate.scss */
+  70% {
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 448, ../sass/vendor/_animate.scss */
+  100% {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003454}}
+.animated.flipInX {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: flipInX;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: flipInX;
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
+@-webkit-keyframes flipOutX {
+  /* line 465, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 469, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes flipOutX {
+  /* line 476, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 480, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes flipOutX {
+  /* line 487, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 491, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutX {
+  /* line 498, ../sass/vendor/_animate.scss */
+  0% {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 502, ../sass/vendor/_animate.scss */
+  100% {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003508}}
+.animated.flipOutX {
+  -webkit-animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  -moz-animation-name: flipOutX;
+  -moz-backface-visibility: visible !important;
+  -o-animation-name: flipOutX;
+  -o-backface-visibility: visible !important;
+  animation-name: flipOutX;
+  backface-visibility: visible !important;
+}
+
+@-webkit-keyframes flipInY {
+  /* line 519, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 524, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 528, ../sass/vendor/_animate.scss */
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 532, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes flipInY {
+  /* line 538, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 543, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 547, ../sass/vendor/_animate.scss */
+  70% {
+    -moz-transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 551, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes flipInY {
+  /* line 557, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 562, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 566, ../sass/vendor/_animate.scss */
+  70% {
+    -o-transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 570, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInY {
+  /* line 576, ../sass/vendor/_animate.scss */
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 581, ../sass/vendor/_animate.scss */
+  40% {
+    transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 585, ../sass/vendor/_animate.scss */
+  70% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 589, ../sass/vendor/_animate.scss */
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003595}}
+.animated.flipInY {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: flipInY;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: flipInY;
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+}
+
+@-webkit-keyframes flipOutY {
+  /* line 606, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 610, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes flipOutY {
+  /* line 616, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 620, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes flipOutY {
+  /* line 626, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 630, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY {
+  /* line 636, ../sass/vendor/_animate.scss */
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 640, ../sass/vendor/_animate.scss */
+  100% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003646}}
+.animated.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: flipOutY;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: flipOutY;
+  backface-visibility: visible !important;
+  animation-name: flipOutY;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 657, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 658, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 662, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 663, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 667, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 668, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 672, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 673, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003676}}
+.animated.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+  /* line 683, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  /* line 688, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  /* line 695, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  /* line 700, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  /* line 707, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  /* line 712, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  /* line 719, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* line 724, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003730}}
+.animated.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+  /* line 737, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  /* line 742, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  /* line 749, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+
+  /* line 754, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDown {
+  /* line 761, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+
+  /* line 766, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  /* line 773, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  /* line 778, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003784}}
+.animated.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+  /* line 791, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+
+  /* line 796, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInLeft {
+  /* line 803, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+
+  /* line 808, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInLeft {
+  /* line 815, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+
+  /* line 820, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  /* line 827, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  /* line 832, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003838}}
+.animated.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  /* line 845, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+
+  /* line 850, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRight {
+  /* line 857, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+
+  /* line 862, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRight {
+  /* line 869, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+
+  /* line 874, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  /* line 881, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  /* line 886, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003892}}
+.animated.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  /* line 899, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+
+  /* line 904, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUpBig {
+  /* line 911, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+
+  /* line 916, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUpBig {
+  /* line 923, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+
+  /* line 928, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpBig {
+  /* line 935, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  /* line 940, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\00003946}}
+.animated.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  -moz-animation-name: fadeInUpBig;
+  -o-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  /* line 953, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+
+  /* line 958, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  /* line 965, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+
+  /* line 970, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDownBig {
+  /* line 977, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+
+  /* line 982, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  /* line 989, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  /* line 994, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031000}}
+.animated.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  -moz-animation-name: fadeInDownBig;
+  -o-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  /* line 1007, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+
+  /* line 1012, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInLeftBig {
+  /* line 1018, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+
+  /* line 1023, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInLeftBig {
+  /* line 1029, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+
+  /* line 1034, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  /* line 1040, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  /* line 1045, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031051}}
+.animated.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  -moz-animation-name: fadeInLeftBig;
+  -o-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  /* line 1058, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+
+  /* line 1063, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRightBig {
+  /* line 1070, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+
+  /* line 1075, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRightBig {
+  /* line 1082, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+
+  /* line 1087, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  /* line 1094, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  /* line 1099, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031105}}
+.animated.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  -moz-animation-name: fadeInRightBig;
+  -o-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 1112, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1113, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  /* line 1117, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1118, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  /* line 1122, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1123, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 1127, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1128, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031131}}
+.animated.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutUp {
+  /* line 1138, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 1143, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+}
+
+@-moz-keyframes fadeOutUp {
+  /* line 1149, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  /* line 1154, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+}
+
+@-o-keyframes fadeOutUp {
+  /* line 1160, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  /* line 1165, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  /* line 1171, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* line 1176, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031182}}
+.animated.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  -moz-animation-name: fadeOutUp;
+  -o-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutDown {
+  /* line 1189, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 1194, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+}
+
+@-moz-keyframes fadeOutDown {
+  /* line 1201, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  /* line 1206, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+}
+
+@-o-keyframes fadeOutDown {
+  /* line 1213, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  /* line 1218, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  /* line 1225, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* line 1230, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031236}}
+.animated.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  -moz-animation-name: fadeOutDown;
+  -o-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  /* line 1243, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1248, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@-moz-keyframes fadeOutLeft {
+  /* line 1255, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1260, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+}
+
+@-o-keyframes fadeOutLeft {
+  /* line 1267, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  /* line 1272, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  /* line 1279, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* line 1284, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031290}}
+.animated.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  -moz-animation-name: fadeOutLeft;
+  -o-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+  /* line 1297, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1302, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+}
+
+@-moz-keyframes fadeOutRight {
+  /* line 1309, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1314, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+}
+
+@-o-keyframes fadeOutRight {
+  /* line 1321, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  /* line 1326, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOutRight {
+  /* line 1333, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* line 1338, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031344}}
+.animated.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  -moz-animation-name: fadeOutRight;
+  -o-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  /* line 1351, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 1356, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+}
+
+@-moz-keyframes fadeOutUpBig {
+  /* line 1363, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  /* line 1368, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+}
+
+@-o-keyframes fadeOutUpBig {
+  /* line 1375, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  /* line 1380, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  /* line 1387, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* line 1392, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031398}}
+.animated.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  -moz-animation-name: fadeOutUpBig;
+  -o-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  /* line 1405, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 1410, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+}
+
+@-moz-keyframes fadeOutDownBig {
+  /* line 1417, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  /* line 1422, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+}
+
+@-o-keyframes fadeOutDownBig {
+  /* line 1429, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  /* line 1434, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  /* line 1441, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* line 1446, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031452}}
+.animated.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  -moz-animation-name: fadeOutDownBig;
+  -o-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  /* line 1459, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1464, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+}
+
+@-moz-keyframes fadeOutLeftBig {
+  /* line 1471, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1476, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+}
+
+@-o-keyframes fadeOutLeftBig {
+  /* line 1483, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  /* line 1488, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  /* line 1495, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* line 1500, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031506}}
+.animated.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  -moz-animation-name: fadeOutLeftBig;
+  -o-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig;
+}
+
+@-webkit-keyframes fadeOutRightBig {
+  /* line 1513, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1518, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+}
+
+@-moz-keyframes fadeOutRightBig {
+  /* line 1524, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1529, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+}
+
+@-o-keyframes fadeOutRightBig {
+  /* line 1535, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  /* line 1540, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+}
+
+@keyframes fadeOutRightBig {
+  /* line 1546, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* line 1551, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031557}}
+.animated.fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  -moz-animation-name: fadeOutRightBig;
+  -o-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig;
+}
+
+@-webkit-keyframes bounceIn {
+  /* line 1564, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+
+  /* line 1569, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+
+  /* line 1574, ../sass/vendor/_animate.scss */
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+
+  /* line 1578, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes bounceIn {
+  /* line 1584, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3);
+  }
+
+  /* line 1589, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05);
+  }
+
+  /* line 1594, ../sass/vendor/_animate.scss */
+  70% {
+    -moz-transform: scale(0.9);
+  }
+
+  /* line 1598, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes bounceIn {
+  /* line 1604, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.3);
+  }
+
+  /* line 1609, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.05);
+  }
+
+  /* line 1614, ../sass/vendor/_animate.scss */
+  70% {
+    -o-transform: scale(0.9);
+  }
+
+  /* line 1618, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  /* line 1624, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  /* line 1629, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  /* line 1634, ../sass/vendor/_animate.scss */
+  70% {
+    transform: scale(0.9);
+  }
+
+  /* line 1638, ../sass/vendor/_animate.scss */
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  /* line 1644, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+
+  /* line 1649, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideInDown {
+  /* line 1655, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+
+  /* line 1660, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideInDown {
+  /* line 1666, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+
+  /* line 1671, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  /* line 1677, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  /* line 1682, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031687}}
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  -moz-animation-name: slideInDown;
+  -o-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  /* line 1695, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+
+  /* line 1700, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInLeft {
+  /* line 1706, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+
+  /* line 1711, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes slideInLeft {
+  /* line 1717, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+
+  /* line 1722, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  /* line 1728, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  /* line 1733, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031738}}
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  -moz-animation-name: slideInLeft;
+  -o-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  /* line 1746, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+
+  /* line 1751, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  /* line 1757, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+
+  /* line 1762, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes slideInRight {
+  /* line 1768, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+
+  /* line 1773, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  /* line 1779, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  /* line 1784, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031789}}
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideOutLeft {
+  /* line 1797, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1801, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+}
+
+@-moz-keyframes slideOutLeft {
+  /* line 1808, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1812, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+}
+
+@-o-keyframes slideOutLeft {
+  /* line 1819, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0);
+  }
+
+  /* line 1823, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+}
+
+@keyframes slideOutLeft {
+  /* line 1830, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 1834, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031840}}
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  -moz-animation-name: slideOutLeft;
+  -o-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+@-webkit-keyframes slideOutRight {
+  /* line 1848, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 1852, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+}
+
+@-moz-keyframes slideOutRight {
+  /* line 1859, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0);
+  }
+
+  /* line 1863, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+}
+
+@-o-keyframes slideOutRight {
+  /* line 1870, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0);
+  }
+
+  /* line 1874, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+}
+
+@keyframes slideOutRight {
+  /* line 1881, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 1885, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031891}}
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+@-webkit-keyframes slideOutUp {
+  /* line 1899, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 1903, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+}
+
+@-moz-keyframes slideOutUp {
+  /* line 1910, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  /* line 1914, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+}
+
+@-o-keyframes slideOutUp {
+  /* line 1921, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  /* line 1925, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+}
+
+@keyframes slideOutUp {
+  /* line 1932, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateY(0);
+  }
+
+  /* line 1936, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031942}}
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  -moz-animation-name: slideOutUp;
+  -o-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000031949}}
+.animated.bounceIn {
+  -webkit-animation-name: bounceIn;
+  -moz-animation-name: bounceIn;
+  -o-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes bounceInUp {
+  /* line 1956, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+
+  /* line 1961, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+  }
+
+  /* line 1966, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: translateY(10px);
+  }
+
+  /* line 1970, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes bounceInUp {
+  /* line 1975, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+
+  /* line 1980, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(-30px);
+  }
+
+  /* line 1985, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: translateY(10px);
+  }
+
+  /* line 1989, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes bounceInUp {
+  /* line 1995, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+
+  /* line 2000, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -o-transform: translateY(-30px);
+  }
+
+  /* line 2005, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: translateY(10px);
+  }
+
+  /* line 2009, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  /* line 2015, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  /* line 2020, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  /* line 2025, ../sass/vendor/_animate.scss */
+  80% {
+    transform: translateY(10px);
+  }
+
+  /* line 2029, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032034}}
+.animated.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  -moz-animation-name: bounceInUp;
+  -o-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@-webkit-keyframes bounceInDown {
+  /* line 2041, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+
+  /* line 2046, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+  }
+
+  /* line 2051, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: translateY(-10px);
+  }
+
+  /* line 2055, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes bounceInDown {
+  /* line 2061, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+
+  /* line 2066, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(30px);
+  }
+
+  /* line 2071, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: translateY(-10px);
+  }
+
+  /* line 2075, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes bounceInDown {
+  /* line 2081, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+
+  /* line 2086, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -o-transform: translateY(30px);
+  }
+
+  /* line 2091, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: translateY(-10px);
+  }
+
+  /* line 2095, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  /* line 2101, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  /* line 2106, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  /* line 2111, ../sass/vendor/_animate.scss */
+  80% {
+    transform: translateY(-10px);
+  }
+
+  /* line 2115, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032120}}
+.animated.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  -moz-animation-name: bounceInDown;
+  -o-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceInLeft {
+  /* line 2127, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+
+  /* line 2132, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+  }
+
+  /* line 2137, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: translateX(-10px);
+  }
+
+  /* line 2141, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes bounceInLeft {
+  /* line 2147, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+
+  /* line 2152, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(30px);
+  }
+
+  /* line 2157, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: translateX(-10px);
+  }
+
+  /* line 2161, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes bounceInLeft {
+  /* line 2167, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+
+  /* line 2172, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -o-transform: translateX(30px);
+  }
+
+  /* line 2177, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: translateX(-10px);
+  }
+
+  /* line 2181, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes bounceInLeft {
+  /* line 2187, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  /* line 2192, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+
+  /* line 2197, ../sass/vendor/_animate.scss */
+  80% {
+    transform: translateX(-10px);
+  }
+
+  /* line 2201, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032206}}
+.animated.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  -moz-animation-name: bounceInLeft;
+  -o-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes bounceInRight {
+  /* line 2213, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+
+  /* line 2218, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+  }
+
+  /* line 2223, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: translateX(10px);
+  }
+
+  /* line 2227, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes bounceInRight {
+  /* line 2233, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+
+  /* line 2238, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-30px);
+  }
+
+  /* line 2243, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: translateX(10px);
+  }
+
+  /* line 2247, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes bounceInRight {
+  /* line 2253, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+
+  /* line 2258, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    -o-transform: translateX(-30px);
+  }
+
+  /* line 2263, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: translateX(10px);
+  }
+
+  /* line 2267, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes bounceInRight {
+  /* line 2273, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  /* line 2278, ../sass/vendor/_animate.scss */
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+
+  /* line 2283, ../sass/vendor/_animate.scss */
+  80% {
+    transform: translateX(10px);
+  }
+
+  /* line 2287, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032292}}
+.animated.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  -moz-animation-name: bounceInRight;
+  -o-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceOut {
+  /* line 2299, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 2303, ../sass/vendor/_animate.scss */
+  25% {
+    -webkit-transform: scale(0.95);
+  }
+
+  /* line 2307, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+  }
+
+  /* line 2312, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+}
+
+@-moz-keyframes bounceOut {
+  /* line 2319, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  /* line 2323, ../sass/vendor/_animate.scss */
+  25% {
+    -moz-transform: scale(0.95);
+  }
+
+  /* line 2327, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.1);
+  }
+
+  /* line 2332, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: scale(0.3);
+  }
+}
+
+@-o-keyframes bounceOut {
+  /* line 2339, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: scale(1);
+  }
+
+  /* line 2343, ../sass/vendor/_animate.scss */
+  25% {
+    -o-transform: scale(0.95);
+  }
+
+  /* line 2347, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.1);
+  }
+
+  /* line 2352, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: scale(0.3);
+  }
+}
+
+@keyframes bounceOut {
+  /* line 2359, ../sass/vendor/_animate.scss */
+  0% {
+    transform: scale(1);
+  }
+
+  /* line 2363, ../sass/vendor/_animate.scss */
+  25% {
+    transform: scale(0.95);
+  }
+
+  /* line 2367, ../sass/vendor/_animate.scss */
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* line 2372, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032378}}
+.animated.bounceOut {
+  -webkit-animation-name: bounceOut;
+  -moz-animation-name: bounceOut;
+  -o-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+@-webkit-keyframes bounceOutUp {
+  /* line 2385, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 2389, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+  }
+
+  /* line 2394, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+}
+
+@-moz-keyframes bounceOutUp {
+  /* line 2401, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  /* line 2405, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -moz-transform: translateY(20px);
+  }
+
+  /* line 2410, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+}
+
+@-o-keyframes bounceOutUp {
+  /* line 2417, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  /* line 2421, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -o-transform: translateY(20px);
+  }
+
+  /* line 2426, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  /* line 2433, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateY(0);
+  }
+
+  /* line 2437, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+
+  /* line 2442, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032448}}
+.animated.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  -moz-animation-name: bounceOutUp;
+  -o-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+@-webkit-keyframes bounceOutDown {
+  /* line 2455, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 2459, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+  }
+
+  /* line 2464, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+}
+
+@-moz-keyframes bounceOutDown {
+  /* line 2471, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  /* line 2475, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -moz-transform: translateY(-20px);
+  }
+
+  /* line 2480, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+}
+
+@-o-keyframes bounceOutDown {
+  /* line 2487, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  /* line 2491, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -o-transform: translateY(-20px);
+  }
+
+  /* line 2496, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+}
+
+@keyframes bounceOutDown {
+  /* line 2503, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateY(0);
+  }
+
+  /* line 2507, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  /* line 2512, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032518}}
+.animated.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  -moz-animation-name: bounceOutDown;
+  -o-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  /* line 2525, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 2529, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+  }
+
+  /* line 2534, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+}
+
+@-moz-keyframes bounceOutLeft {
+  /* line 2541, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0);
+  }
+
+  /* line 2545, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+  }
+
+  /* line 2550, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+}
+
+@-o-keyframes bounceOutLeft {
+  /* line 2557, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0);
+  }
+
+  /* line 2561, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -o-transform: translateX(20px);
+  }
+
+  /* line 2566, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+}
+
+@keyframes bounceOutLeft {
+  /* line 2573, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 2577, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+
+  /* line 2582, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032588}}
+.animated.bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  -moz-animation-name: bounceOutLeft;
+  -o-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}
+
+@-webkit-keyframes bounceOutRight {
+  /* line 2595, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0);
+  }
+
+  /* line 2599, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+  }
+
+  /* line 2604, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+}
+
+@-moz-keyframes bounceOutRight {
+  /* line 2611, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0);
+  }
+
+  /* line 2615, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+  }
+
+  /* line 2620, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+}
+
+@-o-keyframes bounceOutRight {
+  /* line 2627, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0);
+  }
+
+  /* line 2631, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    -o-transform: translateX(-20px);
+  }
+
+  /* line 2636, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+}
+
+@keyframes bounceOutRight {
+  /* line 2643, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 2647, ../sass/vendor/_animate.scss */
+  20% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+
+  /* line 2652, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032658}}
+.animated.bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  -moz-animation-name: bounceOutRight;
+  -o-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+}
+
+@-webkit-keyframes rotateIn {
+  /* line 2665, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 2671, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rotateIn {
+  /* line 2678, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: center center;
+    -moz-transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 2684, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: center center;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes rotateIn {
+  /* line 2691, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: center center;
+    -o-transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 2697, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: center center;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  /* line 2704, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: center center;
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 2710, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: center center;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032717}}
+.animated.rotateIn {
+  -webkit-animation-name: rotateIn;
+  -moz-animation-name: rotateIn;
+  -o-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+
+@-webkit-keyframes rotateInUpLeft {
+  /* line 2724, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2730, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rotateInUpLeft {
+  /* line 2738, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2744, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes rotateInUpLeft {
+  /* line 2752, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2758, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpLeft {
+  /* line 2766, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2772, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032779}}
+.animated.rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  -moz-animation-name: rotateInUpLeft;
+  -o-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+  /* line 2786, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2792, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rotateInDownLeft {
+  /* line 2800, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2806, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes rotateInDownLeft {
+  /* line 2814, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2820, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft {
+  /* line 2828, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2834, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032841}}
+.animated.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  -moz-animation-name: rotateInDownLeft;
+  -o-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+
+@-webkit-keyframes rotateInUpRight {
+  /* line 2848, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2854, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rotateInUpRight {
+  /* line 2862, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2868, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes rotateInUpRight {
+  /* line 2876, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2882, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpRight {
+  /* line 2890, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2896, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: right bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032903}}
+.animated.rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  -moz-animation-name: rotateInUpRight;
+  -o-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  /* line 2910, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2916, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rotateInDownRight {
+  /* line 2924, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2930, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes rotateInDownRight {
+  /* line 2938, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2944, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight {
+  /* line 2952, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: right bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2958, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: right bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000032965}}
+.animated.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  -moz-animation-name: rotateInDownRight;
+  -o-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight;
+}
+
+@-webkit-keyframes rotateOut {
+  /* line 2972, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2978, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateOut {
+  /* line 2986, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: center center;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2992, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: center center;
+    -moz-transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateOut {
+  /* line 3000, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: center center;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3006, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: center center;
+    -o-transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOut {
+  /* line 3014, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: center center;
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3020, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: center center;
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033027}}
+.animated.rotateOut {
+  -webkit-animation-name: rotateOut;
+  -moz-animation-name: rotateOut;
+  -o-animation-name: rotateOut;
+  animation-name: rotateOut;
+}
+
+@-webkit-keyframes rotateOutUpLeft {
+  /* line 3034, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3040, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateOutUpLeft {
+  /* line 3048, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3054, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateOutUpLeft {
+  /* line 3062, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3068, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpLeft {
+  /* line 3076, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3082, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033089}}
+.animated.rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  -moz-animation-name: rotateOutUpLeft;
+  -o-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft;
+}
+
+@-webkit-keyframes rotateOutDownLeft {
+  /* line 3096, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3102, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateOutDownLeft {
+  /* line 3110, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3116, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: left bottom;
+    -moz-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateOutDownLeft {
+  /* line 3124, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3130, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: left bottom;
+    -o-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownLeft {
+  /* line 3138, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: left bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3144, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033151}}
+.animated.rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  -moz-animation-name: rotateOutDownLeft;
+  -o-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft;
+}
+
+@-webkit-keyframes rotateOutUpRight {
+  /* line 3158, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3164, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateOutUpRight {
+  /* line 3172, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3178, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateOutUpRight {
+  /* line 3186, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3192, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight {
+  /* line 3200, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: right bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3206, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: right bottom;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033213}}
+.animated.rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  -moz-animation-name: rotateOutUpRight;
+  -o-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight;
+}
+
+@-webkit-keyframes rotateOutDownRight {
+  /* line 3220, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3226, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotateOutDownRight {
+  /* line 3234, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3240, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform-origin: right bottom;
+    -moz-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes rotateOutDownRight {
+  /* line 3248, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3254, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform-origin: right bottom;
+    -o-transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownRight {
+  /* line 3262, ../sass/vendor/_animate.scss */
+  0% {
+    transform-origin: right bottom;
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 3268, ../sass/vendor/_animate.scss */
+  100% {
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033275}}
+.animated.rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  -moz-animation-name: rotateOutDownRight;
+  -o-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight;
+}
+
+@-webkit-keyframes hinge {
+  /* line 3282, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3283, ../sass/vendor/_animate.scss */
+  20%, 60% {
+    -webkit-transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3284, ../sass/vendor/_animate.scss */
+  40% {
+    -webkit-transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3285, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3286, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes hinge {
+  /* line 3290, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: rotate(0);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3291, ../sass/vendor/_animate.scss */
+  20%, 60% {
+    -moz-transform: rotate(80deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3292, ../sass/vendor/_animate.scss */
+  40% {
+    -moz-transform: rotate(60deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3293, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3294, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes hinge {
+  /* line 3298, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: rotate(0);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3299, ../sass/vendor/_animate.scss */
+  20%, 60% {
+    -o-transform: rotate(80deg);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3300, ../sass/vendor/_animate.scss */
+  40% {
+    -o-transform: rotate(60deg);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3301, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+
+  /* line 3302, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  /* line 3306, ../sass/vendor/_animate.scss */
+  0% {
+    transform: rotate(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 3307, ../sass/vendor/_animate.scss */
+  20%, 60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 3308, ../sass/vendor/_animate.scss */
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 3309, ../sass/vendor/_animate.scss */
+  80% {
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 3310, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033313}}
+.animated.hinge {
+  -webkit-animation-name: hinge;
+  -moz-animation-name: hinge;
+  -o-animation-name: hinge;
+  animation-name: hinge;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollIn {
+  /* line 3322, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 3323, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@-moz-keyframes rollIn {
+  /* line 3327, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 3328, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@-o-keyframes rollIn {
+  /* line 3332, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 3333, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes rollIn {
+  /* line 3337, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 3338, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033341}}
+.animated.rollIn {
+  -webkit-animation-name: rollIn;
+  -moz-animation-name: rollIn;
+  -o-animation-name: rollIn;
+  animation-name: rollIn;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollOut {
+  /* line 3350, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 3355, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@-moz-keyframes rollOut {
+  /* line 3362, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 3367, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@-o-keyframes rollOut {
+  /* line 3374, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 3379, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    -o-transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@keyframes rollOut {
+  /* line 3386, ../sass/vendor/_animate.scss */
+  0% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 3391, ../sass/vendor/_animate.scss */
+  100% {
+    opacity: 0;
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033397}}
+.animated.rollOut {
+  -webkit-animation-name: rollOut;
+  -moz-animation-name: rollOut;
+  -o-animation-name: rollOut;
+  animation-name: rollOut;
+}
+
+/* originally authored by Angelo Rohit - https://github.com/angelorohit */
+@-webkit-keyframes lightSpeedIn {
+  /* line 3407, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 3408, ../sass/vendor/_animate.scss */
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 3409, ../sass/vendor/_animate.scss */
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 3410, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes lightSpeedIn {
+  /* line 3414, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 3415, ../sass/vendor/_animate.scss */
+  60% {
+    -moz-transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 3416, ../sass/vendor/_animate.scss */
+  80% {
+    -moz-transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 3417, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes lightSpeedIn {
+  /* line 3421, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 3422, ../sass/vendor/_animate.scss */
+  60% {
+    -o-transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 3423, ../sass/vendor/_animate.scss */
+  80% {
+    -o-transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 3424, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  /* line 3428, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 3429, ../sass/vendor/_animate.scss */
+  60% {
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 3430, ../sass/vendor/_animate.scss */
+  80% {
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 3431, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033434}}
+.animated.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  -moz-animation-name: lightSpeedIn;
+  -o-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033446}}
+.animated.lightSpeedIn {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+/* originally authored by Angelo Rohit - https://github.com/angelorohit */
+@-webkit-keyframes lightSpeedOut {
+  /* line 3456, ../sass/vendor/_animate.scss */
+  0% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 3457, ../sass/vendor/_animate.scss */
+  100% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes lightSpeedOut {
+  /* line 3461, ../sass/vendor/_animate.scss */
+  0% {
+    -moz-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 3462, ../sass/vendor/_animate.scss */
+  100% {
+    -moz-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes lightSpeedOut {
+  /* line 3466, ../sass/vendor/_animate.scss */
+  0% {
+    -o-transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 3467, ../sass/vendor/_animate.scss */
+  100% {
+    -o-transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  /* line 3471, ../sass/vendor/_animate.scss */
+  0% {
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 3472, ../sass/vendor/_animate.scss */
+  100% {
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033475}}
+.animated.lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  -moz-animation-name: lightSpeedOut;
+  -o-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/vendor\/_animate\.scss}line{font-family:\000033487}}
+.animated.lightSpeedOut {
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000321}}
+.v-aligner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000327}}
+.hidden {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000331}}
+.signin, .signup {
+  margin-left: 19px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000335}}
+.form-action-buttons {
+  text-align: center;
+  clear: both;
+  margin-left: 10%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000341}}
+.unstyled {
+  list-style-type: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000345}}
+.select-resorts {
+  background-color: green;
+  height: 40px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/boris\/angelhackGemini2\/public\/sass\/gemini\.scss}line{font-family:\0000350}}
+.finish-booking {
+  height: 40px;
+  cursor: pointer;
+}

@@ -10,10 +10,10 @@
                     <span id="selected{{service._id}}" class="hidden green"></span>
 
                     <div id="listWrap{{service._id}}">
-                    <div>{{service.serviceType}}</div>
+                    <!--<div>{{service.serviceType}}</div>-->
                     <div>{{service.content}}</div>
                     <img width="100px" src="{{service.thumbnailUrl}}">
-
+					&nbsp;
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="lodgingServiceDetails($event)">ViewDetails</div>
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
                     <!-- if this div doesn't follow the previois, the ui will break -->
@@ -43,6 +43,7 @@
                         </div>
                     </div>
                 </div>
+				<hr>
             </li>
         </ul>
         <h1 data-ng-hide="!services || services.length">No resorts match
