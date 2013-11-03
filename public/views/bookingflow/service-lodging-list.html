@@ -6,7 +6,7 @@
             <li data-ng-repeat="service in services">
                 
                 
-                    <span>{{service.title}}</span>
+                    <h3>{{service.title}}</h3>
                     <span id="selected{{service._id}}" class="hidden green"></span>
 
                     <div id="listWrap{{service._id}}">
@@ -14,7 +14,7 @@
                     <div>{{service.content}}</div>
                     <img width="100px" src="{{service.thumbnailUrl}}">
 					&nbsp;
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="lodgingServiceDetails($event)">ViewDetails</div>
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="lodgingServiceDetails($event)">View Details</div>&nbsp;&nbsp;
                     <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
                     <!-- if this div doesn't follow the previois, the ui will break -->
                     <div class="hidden">

@@ -6,7 +6,7 @@
             <li data-ng-repeat="service in services">
                 
                 
-                    <span>{{service.title}}</span>
+                    <h3>{{service.title}}</h3>
                     <span id="selected{{service._id}}" class="hidden green"></span>
 
                     <div id="listWrap{{service._id}}">
@@ -14,8 +14,9 @@
                     <div>{{service.content}}</div>
                     <img width="100px" src="{{service.thumbnailUrl}}">
 
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="activityServiceDetail($event)">ViewDetails</div>
-                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Select</div>
+					&nbsp;
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="activityServiceDetail($event)">View Details</div>&nbsp;&nbsp;
+                    <div class="btn btn-base btn-dark" id="{{service._id}}" ng-click="selectServices($event)">Add</div>
                     <!-- if this div doesn't follow the previois, the ui will break -->
                     <div class="hidden">
                         <div class="row">
@@ -43,10 +44,8 @@
                         </div>
                     </div>
                 </div>
+				<hr>
             </li>
-
-			<hr>
-
         </ul>
         <h1 data-ng-hide="!services || services.length">No resorts match
             <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>

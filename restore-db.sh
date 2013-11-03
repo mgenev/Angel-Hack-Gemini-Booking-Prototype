@@ -1,1 +1,1 @@
-mongorestore -d angelhack-gemini load/angelhack-gemini/
+mongorestore --drop -d angelhack-gemini load/angelhack-gemini/
