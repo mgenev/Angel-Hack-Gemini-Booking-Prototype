@@ -30,7 +30,7 @@ var ReservationSchema = new Schema({
         default: '',
         trim: true
     },
-    content: {
+    destination: {
         type: String,
         default: '',
         trim: true

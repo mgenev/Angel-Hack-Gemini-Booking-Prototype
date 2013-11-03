@@ -11,15 +11,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
 
    
     $scope.start = function () {
-        $location.path("bookingflow/flow" );        
-    }
-
-    $scope.pickDateDestination = function () {
-        $scope.reservation.destination = this.destination;
-        $scope.reservation.start = this.start;
-        $scope.reservation.end = this.end;                
-        console.log("does this fire?");
-        $scope.findClients();
+        $location.path("bookingflow/datedestination" );        
     }
 
     $scope.findClients = function() {
@@ -35,18 +27,20 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         
     };
 
-    // $scope.create = function() {
-    //     var reservation = new Reservations({
-    //         title: this.title,
-    //         content: this.content
-    //     });
-    //     reservation.$save(function(response) {
-    //         $location.path("reservations/" + response._id);
-    //     });
+    $scope.create = function() {
+        var reservation = new Reservations({
+            startDate: this.startDate,
+            endDate: this.endDate,
+            destination: this.destination
+        });
+        reservation.$save(function(response) {
+            $location.path("bookingflow/servicelist" + response._id);
+        });
 
-    //     this.title = "";
-    //     this.content = "";
-    // };
+        this.startDate = "";
+        this.endDate = "";
+        this.destination = "";
+    };
 
     // $scope.remove = function(reservation) {
     //     reservation.$remove();  
