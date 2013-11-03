@@ -5544,24 +5544,29 @@ body {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000321}}
+.green {
+  color: green;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000325}}
 .v-aligner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000331}}
 .hidden {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000335}}
 .select-resorts {
   background-color: green;
   height: 40px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mgenev\/Projects\/angelhack_Gemini\/public\/sass\/gemini\.scss}line{font-family:\0000340}}
 .finish-booking {
   height: 40px;
   cursor: pointer;

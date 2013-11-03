@@ -12,6 +12,15 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         $location.path("bookingflow/datedestination" );        
     }
 
+    $scope.calculateDays = function (startDate, endDate) {
+        var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        var firstDate = new Date(startDate);
+        var secondDate = new Date(endDate);
+        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+
+        return diffDays;
+    };
+
     $scope.findClients = function() {
 
         Clients.query(function(clients) {
@@ -64,7 +73,6 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         $scope.selectedServiceId = e.srcElement.id;
 
         var pickers = angular.element(e.srcElement).next().removeClass("hidden");
-        console.log(document.querySelector( '#startDate'+ $scope.selectedServiceId ));
 
         $( '#startDate'+ $scope.selectedServiceId ).pickadate();
         $( '#endDate'+ $scope.selectedServiceId ).pickadate();
@@ -81,7 +89,9 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             var endDate = angular.element(document.querySelector( '#endDate'+serviceId ) ).val();
             var amount = angular.element(document.querySelector( '#amount'+serviceId ) ).val();
 
-        
+            var daysReserved = $scope.calculateDays(startDate, endDate);
+            var calcedPrice = service.price * daysReserved;
+
             var reservation = $scope.reservation;
 
             var datedService = {
@@ -101,7 +111,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             reservation.$update(function(response) {
                 // $location.path("bookingflow/servicelist/" + response._id);
                 angular.element(document.querySelector( '#listWrap'+serviceId ) ).addClass("hidden");
-                angular.element(document.querySelector( '#selected'+serviceId ) ).text("Selected during " + startDate + " to " + endDate + " for " + amount + " guests").removeClass("hidden");
+                angular.element(document.querySelector( '#selected'+serviceId ) ).text("Selected during " + startDate + " to " + endDate + " for " + amount + " guests" + " at a cost of $" + calcedPrice).removeClass("hidden");
                
             });
 
