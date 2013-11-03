@@ -1,5 +1,8 @@
 angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope', '$routeParams', '$location', 'Global', 'Reservations', 'Clients', 'Services', 'Users', function ($scope, $routeParams, $location, Global, Reservations, Clients, Services, Users) {
 
+    $('#startDate').pickadate();
+    $('#endDate').pickadate();
+
     $scope.global = Global;
     $scope.reservation = {};
    

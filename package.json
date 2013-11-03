@@ -49,6 +49,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-nodemon": "latest",
     "grunt-concurrent": "latest",
-    "grunt-mocha-test": "latest"
+    "grunt-mocha-test": "latest",
+    "pickadate": "~2.1.6"
   }
 }
