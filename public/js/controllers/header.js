@@ -20,7 +20,7 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
                 "link": "reservations/create"
             }, {
                 "title": "Create New Service",
-                "link": "services/create"
+                "link": "services/create/5275698c53da846e70000001"
             }
         ];
 
