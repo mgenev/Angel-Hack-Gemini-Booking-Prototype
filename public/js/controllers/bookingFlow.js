@@ -2,13 +2,6 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
 
     $scope.global = Global;
     $scope.reservation = {};
-
-    $scope.pickDateDestination = true;
-    $scope.resortList = false;
-
-
-
-
    
     $scope.start = function () {
         $location.path("bookingflow/datedestination" );        
@@ -27,6 +20,19 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         
     };
 
+
+    $scope.findServices = function() {
+
+        Services.query(function(services) {
+
+            $scope.services = services;
+            // $scope.pickDateDestination = false;            
+            console.log($scope.services);
+
+        });
+        
+    };
+
     $scope.create = function() {
         var reservation = new Reservations({
             startDate: this.startDate,
@@ -34,7 +40,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             destination: this.destination
         });
         reservation.$save(function(response) {
-            $location.path("bookingflow/servicelist" + response._id);
+            $location.path("bookingflow/servicelist/" + response._id);
         });
 
         this.startDate = "";
@@ -52,17 +58,17 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     //     }
     // };
 
-    // $scope.update = function() {
-    //     var reservation = $scope.reservation;
-    //     if (!reservation.updated) {
-    //         reservation.updated = [];
-    //     }
-    //     reservation.updated.push(new Date().getTime());
+    $scope.update = function() {
+        var reservation = $scope.reservation;
+        if (!reservation.updated) {
+            reservation.updated = [];
+        }
+        reservation.updated.push(new Date().getTime());
 
-    //     reservation.$update(function() {
-    //         $location.path('reservations/' + reservation._id);
-    //     });
-    // };
+        reservation.$update(function() {
+            $location.path('reservations/' + reservation._id);
+        });
+    };
 
     // $scope.find = function() {
     //     Reservations.query(function(reservations) {
