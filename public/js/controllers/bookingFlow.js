@@ -116,14 +116,31 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         $location.path('bookingflow/confirm-reservation/' + $scope.reservation._id);   
     }
 
-    // $scope.remove = function(reservation) {
-    //     reservation.$remove();  
+    $scope.confirmBooking = function () {
+        $location.path('bookingflow/finished/' + $scope.reservation._id);      
+    }
+
+    $scope.serviceDetails = function (e) {
+        $scope.selectedServiceId = e.srcElement.id;
+        $location.path('bookingflow/service-detail/'+ $scope.selectedServiceId + "/" + $scope.reservation._id);         
+    }
+
+    // $scope.removeService = function(reservation) {
+    //     //reservation.$remove();  
 
     //     for (var i in $scope.reservation) {
     //         if ($scope.reservations[i] == reservation) {
     //             $scope.reservations.splice(i, 1);
     //         }
     //     }
+
+    //     reservation.$update(function(response) {
+    //             // $location.path("bookingflow/servicelist/" + response._id);
+    //             angular.element(document.querySelector( '#listWrap'+serviceId ) ).addClass("hidden");
+    //             angular.element(document.querySelector( '#selected'+serviceId ) ).text("Selected during " + startDate + " to " + endDate + " for " + amount + " guests").removeClass("hidden");
+               
+    //         });
+
     // };
 
     $scope.update = function() {
@@ -143,6 +160,15 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     //         $scope.reservations = reservations;
     //     });
     // };
+
+    $scope.findOneService = function() {
+        Services.get({
+            serviceId: $routeParams.serviceId
+        }, function(service) {
+            $scope.service = service;
+            console.log("the service is", $scope.service)
+        });
+    };
 
     $scope.findOneReservation = function() {
         Reservations.get({
