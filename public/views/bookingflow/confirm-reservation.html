@@ -1,4 +1,4 @@
-<section data-ng-controller="BookingFlowController" data-ng-init="findOneReservation()">
+<section data-ng-controller="BookingFlowController" data-ng-init="findOneReservation();">
 
     <h1>Please review your booking</h1>
     <div class="servicelist">
@@ -21,6 +21,8 @@
         <h1 data-ng-hide="!services || services.length">No resorts match
             <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
     </div>
+
+    <h3>Your Total Price is: {{total}}</h3>
 
     <div id="footer" class="container" ng-click="confirmBooking()">
     <nav class="navbar navbar-default navbar-fixed-bottom">
