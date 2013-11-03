@@ -51,6 +51,23 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
         this.destination = "";
     };
 
+
+    $scope.selectServices = function() {
+        var reservation = new Reservations({
+            startDate: this.startDate,
+            endDate: this.endDate,
+            destination: this.destination
+        });
+        reservation.$save(function(response) {
+            $location.path("bookingflow/servicelist/" + response._id);
+        });
+
+        this.startDate = "";
+        this.endDate = "";
+        this.destination = "";
+    };
+
+
     // $scope.remove = function(reservation) {
     //     reservation.$remove();  
 

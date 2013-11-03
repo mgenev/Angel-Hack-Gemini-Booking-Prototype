@@ -67,6 +67,7 @@ ServiceSchema.path('serviceType').validate(function(serviceType) {
  */
 ServiceSchema.statics = {
     load: function(id, cb) {
+        console.log("what is the id????", id);
         this.findOne({
             _id: id
         }).populate('client', 'name address').exec(cb);

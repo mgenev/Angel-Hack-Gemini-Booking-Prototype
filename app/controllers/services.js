@@ -11,6 +11,7 @@ var mongoose = require('mongoose'),
  * Find service by id
  */
 exports.service = function(req, res, next, id) {
+    console.log("id in service.service", id);
     Service.load(id, function(err, service) {
         if (err) return next(err);
         if (!service) return next(new Error('Failed to load service ' + id));
@@ -22,9 +23,12 @@ exports.service = function(req, res, next, id) {
 /**
  * Create a service
  */
+
+
+
 exports.create = function(req, res) {
     var service = new Service(req.body);
-    service.user = req.user;
+    service.client = req.client;
 
     service.save(function(err) {
         if (err) {

@@ -1,15 +1,15 @@
 <section data-ng-controller="BookingFlowController" data-ng-init="findServices()">
     <div class="servicelist">
         <ul class="resorts unstyled">
-            <li data-ng-repeat="client in clients">
-                <span>{{client.name}}</span>
+            <li data-ng-repeat="service in services" ng-click="selectServices()">
+                <span>{{services.name}}</span>
                 <!-- <h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a>
                     </h2> -->
-                <div>{{client.type}}</div>
-                <div>{{client.address}}</div>
+                <div>{{service.serviceType}}</div>
+                <img src="{{service.thumbnailUrl}}">
             </li>
         </ul>
-        <h1 data-ng-hide="!clients || clients.length">No resorts match
+        <h1 data-ng-hide="!services || services.length">No resorts match
             <br>please pick another time/destination <a href="/#!/bookingflow/create">Create One</a>?</h1>
     </div>
 </section>
