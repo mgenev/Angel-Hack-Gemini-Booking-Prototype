@@ -22,7 +22,18 @@ var ReservationSchema = new Schema({
     },
     services: {
         type: Array,
-        default: [ {} ], // array of { servicesId: ref, daterange: [ startDate, endDate ] }
+        default: [{
+            user: {
+                type: Schema.ObjectId,
+                ref: 'Service'
+            },
+            startDate: {
+                type: Date
+            },
+            endDate: {
+                type: Date
+            }
+        }], // array of { servicesId: ref, startDate, endDate ] }
         ref: 'Activity'
     },
     destination: {

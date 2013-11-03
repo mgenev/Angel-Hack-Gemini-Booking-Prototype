@@ -6,6 +6,7 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     $scope.global = Global;
     $scope.reservation = {};
     $scope.selectedServices = [];
+
    
     $scope.start = function () {
         $location.path("bookingflow/datedestination" );        
@@ -56,29 +57,42 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
     $scope.selectServices = function(e) {
         // here reservation has to equal the product of the find
         // console.log("fires", serviceId);
-        var serviceId = e.srcElement.id;
-        
+        $scope.selectedServiceId = e.srcElement.id;
+        var pickers = angular.element(e.srcElement).next().removeClass("hidden");
+    };
+
+    $scope.postServiceDates = function () {
+         var serviceId = $scope.selectedServiceId;
+
         Services.get({
             serviceId: serviceId
         }, function(service) {
-            $scope.selectedServices.push(service);
-            console.log(service);
+            
+            var startDate = angular.element(document.querySelector( '#startDate'+serviceId ) ).val();
+            var endDate = angular.element(document.querySelector( '#endDate'+serviceId ) ).val();
+
+
         
             var reservation = $scope.reservation;
+            var datedService = {
+                service: service,
+                startDate: startDate,
+                endDate: endDate
+            };
 
-        // reservation.updated.push(new Date().getTime());
-            reservation.services.push(service);
+            $scope.selectedServices.push(datedService);
+            console.log($scope.selectedServices);
+            // reservation.updated.push(new Date().getTime());
+            
+            reservation.services.push(datedService);
             console.log(reservation.services);
+            
             reservation.$update(function(response) {
                 $location.path("bookingflow/servicelist/" + response._id);
             });
 
         });
-
-
-
-    };
-
+    }
 
     // $scope.remove = function(reservation) {
     //     reservation.$remove();  
