@@ -19,9 +19,14 @@ var ServiceSchema = new Schema({
         default: '',
         trim: true
     },
-    serviceType: {  // 'Lodging' or 'Activity'
+    serviceType: {  // 'resort' or 'activity'
         type: String,
+        default: 'resort',
         trim: true
+    },
+    thumbnailUrl: {
+        type: String,
+        default: 'http://placehold.it/300x200'
     },
     content: {
         type: String,
@@ -31,6 +36,14 @@ var ServiceSchema = new Schema({
     client: {
         type: Schema.ObjectId,
         ref: 'Client'
+    },
+    availability: {
+        type: Array,
+        default: [  // array of objects with 'startDate' and 'endDate' Dates
+            { 'startDate': new Date(2013, 11, 01),
+              'endDate': new Date(2015, 11, 01)
+            }
+        ]
     }
 });
 
@@ -39,6 +52,10 @@ var ServiceSchema = new Schema({
  */
 ServiceSchema.path('title').validate(function(title) {
     return title.length;
+}, 'Title cannot be blank');
+
+ServiceSchema.path('serviceType').validate(function(serviceType) {
+    return serviceType === 'resort' || serviceType === 'activity' || serviceType === '';
 }, 'Title cannot be blank');
 
 /**
