@@ -70,14 +70,15 @@ angular.module('mean.bookingflow').controller('BookingFlowController', ['$scope'
             
             var startDate = angular.element(document.querySelector( '#startDate'+serviceId ) ).val();
             var endDate = angular.element(document.querySelector( '#endDate'+serviceId ) ).val();
-
-
+            var amount = angular.element(document.querySelector( '#amount'+serviceId ) ).val();
         
             var reservation = $scope.reservation;
+            
             var datedService = {
                 service: service,
                 startDate: startDate,
-                endDate: endDate
+                endDate: endDate,
+                amount: amount
             };
 
             $scope.selectedServices.push(datedService);

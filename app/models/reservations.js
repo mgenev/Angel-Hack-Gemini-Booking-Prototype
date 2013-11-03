@@ -32,6 +32,9 @@ var ReservationSchema = new Schema({
             },
             endDate: {
                 type: Date
+            },
+            amount: {
+                type: Number
             }
         }], // array of { servicesId: ref, startDate, endDate ] }
         ref: 'Activity'

@@ -19,9 +19,9 @@ var ServiceSchema = new Schema({
         default: '',
         trim: true
     },
-    serviceType: {  // 'resort' or 'activity'
+    serviceType: {  // 'lodging' or 'activity'
         type: String,
-        default: 'resort',
+        default: 'lodging',
         trim: true
     },
     // address: {
