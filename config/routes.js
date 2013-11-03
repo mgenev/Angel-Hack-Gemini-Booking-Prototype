@@ -95,16 +95,16 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the reservationId param
     app.param('reservationId', reservations.reservation);
 
-    //Reservation Routes
-    var activities = require('../app/controllers/activities');
-    app.get('/activities', activities.all);
-    app.post('/activities', auth.requiresLogin, activities.create);
-    app.get('/activities/:activityId', activities.show);
-    app.put('/activities/:activityId', auth.requiresLogin, auth.activity.hasAuthorization, activities.update);
-    app.del('/activities/:activityId', auth.requiresLogin, auth.activity.hasAuthorization, activities.destroy);
+    //Service Routes
+    var services = require('../app/controllers/services');
+    app.get('/services', services.all);
+    app.post('/services', auth.requiresLogin, services.create);
+    app.get('/services/:serviceId', services.show);
+    app.put('/services/:serviceId', auth.requiresLogin, auth.service.hasAuthorization, services.update);
+    app.del('/services/:serviceId', auth.requiresLogin, auth.service.hasAuthorization, services.destroy);
 
-    //Finish with setting up the activityId param
-    app.param('activityId', activities.activity);
+    //Finish with setting up the serviceId param
+    app.param('serviceId', services.service);
 
 
     //Home route

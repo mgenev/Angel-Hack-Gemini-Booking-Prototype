@@ -19,6 +19,10 @@ var ServiceSchema = new Schema({
         default: '',
         trim: true
     },
+    serviceType: {  // 'Lodging' or 'Activity'
+        type: String,
+        trim: true
+    },
     content: {
         type: String,
         default: '',
