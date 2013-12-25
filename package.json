@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "latest",
     "jade": "latest",
+    "hogan-express": "*",
     "mongoose": "latest",
     "connect-mongo": "latest",
     "connect-flash": "latest",
