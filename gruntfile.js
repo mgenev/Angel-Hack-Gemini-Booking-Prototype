@@ -1,9 +1,9 @@
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
+// var mountFolder = function (connect, dir) {
+//     return connect.static(require('path').resolve(dir));
+// };
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -17,10 +17,14 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-env');
 
     // configurable paths
     var yeomanConfig = {
-        app: 'app',
+        app: 'public',
         dist: 'dist'
     };
     // Project Configuration
@@ -28,27 +32,38 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             compass: {
-                files: ['public/sass/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             },
-            jade: {
+            neuter: {
+                files: ['<%= yeoman.app %>/ember/{,*/}*.js'],
+                tasks: ['neuter']
+            },
+            serverTemplates: {
                 files: ['app/views/**'],
                 options: {
                     livereload: true,
-                },
+                }
+            },
+            emberTemplates: {
+                files: '<%= yeoman.app %>/templates/**/*.hbs',
+                tasks: ['emberTemplates'],
+                options: {
+                    livereload: true,
+                }
             },
             js: {
                 files: ['public/js/**', 'app/**/*.js'],
                 // tasks: ['jshint'],
                 options: {
                     livereload: true,
-                },
+                }
             },
             html: {
                 files: ['public/views/**'],
                 options: {
                     livereload: true,
-                },
+                }
             },
             css: {
                 files: ['public/css/**'],
@@ -59,22 +74,23 @@ module.exports = function(grunt) {
         },
         compass: {
             options: {
-                sassDir: 'public/sass',
-                cssDir: 'public/css',
-                generatedImagesDir: '.tmp/img/generated',
+                sassDir: '<%= yeoman.app %>/sass',
+                //cssDir: 'public/css',
+                cssDir: '.tmp/styles',
+                generatedImagesDir: '.tmp/images/generated',
                 imagesDir: 'public/img',
-                javascriptsDir: 'public/js',
+                javascriptsDir: 'public/ember',
                 // fontsDir: '<%= yeoman.app %>/styles/fonts',
                 importPath: 'public/lib',
-                httpImagesPath: '/img',
-                httpGeneratedImagesPath: '/img/generated',
-                httpFontsPath: '/styles/fonts',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/sass/fonts',
                 relativeAssets: false,
                 assetCacheBuster: false
             },
             dist: {
                 options: {
-                    generatedImagesDir: 'dist/img/generated'
+                    generatedImagesDir: 'dist/images/generated'
                 }
             },
             server: {
@@ -103,84 +119,45 @@ module.exports = function(grunt) {
         concurrent: {
             tasks: ['nodemon', 'watch'],
             options: {
-                logConcurrentOutput: true
-            }
-        },
-        mochaTest: {
-            options: {
-                reporter: 'spec'
+            logConcurrentOutput: true
             },
-            src: ['test/**/*.js']
+            server: [
+                'emberTemplates',
+                'compass:server'
+            ],
+            test: [
+                'emberTemplates',
+                'compass'
+            ],
+            dist: [
+                'emberTemplates',
+                'compass:dist',
+                'imagemin',
+                'svgmin',
+                'htmlmin'
+            ]
         },
+        // mochaTest: {
+        //     options: {
+        //         reporter: 'spec'
+        //     },
+        //     src: ['test/**/*.js']
+        // },
+        // mocha: {
+        //     all: {
+        //         options: {
+        //             run: true,
+        //             urls: ['http://localhost:<%= connect.options.port %>/index.html']
+        //         }
+        //     }
+        // },
         env: {
             test: {
                 NODE_ENV: 'test'
             }
         },
         // 
-        yeoman: yeomanConfig,
-        watch: {
-            emberTemplates: {
-                files: '<%= yeoman.app %>/templates/**/*.hbs',
-                tasks: ['emberTemplates']
-            },
-            compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
-            },
-            neuter: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['neuter']
-            },
-            livereload: {
-                options: {
-                    livereload: LIVERELOAD_PORT
-                },
-                files: [
-                    '.tmp/scripts/*.js',
-                    '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
-            }
-        },
-        connect: {
-            options: {
-                port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
-            },
-            livereload: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            lrSnippet,
-                            mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app)
-                        ];
-                    }
-                }
-            },
-            test: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, '.tmp'),
-                            mountFolder(connect, 'test')
-                        ];
-                    }
-                }
-            },
-            dist: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            mountFolder(connect, yeomanConfig.dist)
-                        ];
-                    }
-                }
-            }
-        },
+        yeoman: yeomanConfig,        
         open: {
             server: {
                 path: 'http://localhost:<%= connect.options.port %>'
@@ -210,35 +187,7 @@ module.exports = function(grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
-        compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: 'app/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
-        },
+
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
@@ -343,23 +292,23 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        concurrent: {
-            server: [
-                'emberTemplates',
-                'compass:server'
-            ],
-            test: [
-                'emberTemplates',
-                'compass'
-            ],
-            dist: [
-                'emberTemplates',
-                'compass:dist',
-                'imagemin',
-                'svgmin',
-                'htmlmin'
-            ]
-        },
+        // concurrent: {
+        //     server: [
+        //         'emberTemplates',
+        //         'compass:server'
+        //     ],
+        //     test: [
+        //         'emberTemplates',
+        //         'compass'
+        //     ],
+        //     dist: [
+        //         'emberTemplates',
+        //         'compass:dist',
+        //         'imagemin',
+        //         'svgmin',
+        //         'htmlmin'
+        //     ]
+        // },
         emberTemplates: {
             options: {
                 templateName: function (sourceFile) {
@@ -377,10 +326,10 @@ module.exports = function(grunt) {
             app: {
                 options: {
                     filepathTransform: function (filepath) {
-                        return 'app/' + filepath;
+                        return 'public/' + filepath;
                     }
                 },
-                src: '<%= yeoman.app %>/scripts/app.js',
+                src: '<%= yeoman.app %>/ember/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
         }
@@ -390,52 +339,55 @@ module.exports = function(grunt) {
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
     //Default task(s).
-    grunt.registerTask('default', [ 'concurrent']);
+    // grunt.registerTask('default', [ 'concurrent']);
     //Test task.
-    grunt.registerTask('test', ['env:test', 'mochaTest']);
+    // grunt.registerTask('test', ['env:test', 'mochaTest']);
 
     // Generator Ember 
         grunt.registerTask('server', function (target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+            return grunt.task.run(['build', 'open']);
         }
 
         grunt.task.run([
             'clean:server',
             'concurrent:server',
             'neuter:app',
-            'connect:livereload',
-            'open',
+            'concurrent',
             'watch'
         ]);
     });
 
-    grunt.registerTask('test', [
-        'clean:server',
-        'concurrent:test',
-        'connect:test',
-        'neuter:app',
-        'mocha'
-    ]);
+    // grunt.registerTask('test', [
+    //     'clean:server',
+    //     'concurrent:test',
+    //     'connect:test',
+    //     'neuter:app',
+    //     'mocha'
+    // ]);
 
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
         'neuter:app',
-        'concat',
+        // 'concat',
         'cssmin',
-        'uglify',
+        // 'uglify',
         'copy',
         'rev',
         'usemin'
     ]);
 
-    grunt.registerTask('default', [
-        'jshint',
-        'test',
-        'build'
-    ]);
+    //Default MEAN task(s).
+    grunt.registerTask('default', [ 'concurrent']);
+
+    //Default Generator Ember task(s).
+    // grunt.registerTask('default', [
+    //     'jshint',
+    //     // 'test',
+    //     'build'
+    // ]);
 };
 
 /*        
