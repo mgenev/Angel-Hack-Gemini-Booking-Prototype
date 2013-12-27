@@ -11,8 +11,8 @@
     "angular-bootstrap": "0.6.0",
     "angular-ui-utils": "0.0.4",
     "pickadate": "3.3.0",
-    "jquery": "~2.0.3"
-
+    "jquery": "~2.0.3",
+    "requirejs": "~2.1.9"
   },
   "devDependencies": {
     "ember-mocha-adapter": "0.1.2"

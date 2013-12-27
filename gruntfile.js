@@ -1,6 +1,4 @@
-'use strict';
-var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
+ 
 // var mountFolder = function (connect, dir) {
 //     return connect.static(require('path').resolve(dir));
 // };
@@ -65,8 +63,17 @@ module.exports = function(grunt) {
                     livereload: true,
                 }
             },
+            sass: {
+                files: ['public/css/**']
+            },
             css: {
                 files: ['public/css/**'],
+                options: {
+                    livereload: true
+                }
+            },
+            css2: {
+                files: ['.tmp/styles/**'],
                 options: {
                     livereload: true
                 }
