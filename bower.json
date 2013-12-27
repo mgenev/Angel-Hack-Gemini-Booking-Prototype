@@ -12,7 +12,8 @@
     "angular-ui-utils": "0.0.4",
     "pickadate": "3.3.0",
     "jquery": "~2.0.3",
-    "requirejs": "~2.1.9"
+    "requirejs": "~2.1.9",
+    "font-awesome": "*"
   },
   "devDependencies": {
     "ember-mocha-adapter": "0.1.2"
