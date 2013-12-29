@@ -65,18 +65,18 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1, hashTypes, hashContexts;
-  data.buffer.push("\n        	<li class=\"dropdown\">\n\n        	");
+  data.buffer.push("\n        	<li class=\"dropdown\">\n        	");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers['if'].call(depth0, "link.submenu", {hash:{},inverse:self.program(6, program6, data),fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n            \n        </li>\n        ");
+  data.buffer.push("            \n        	</li>\n        ");
   return buffer;
   }
 function program2(depth0,data) {
   
   var buffer = '', stack1, hashTypes, hashContexts;
-  data.buffer.push("\n 			<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                 \n                 ");
+  data.buffer.push("\n 			<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">                 \n				");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "link.title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
@@ -85,7 +85,7 @@ function program2(depth0,data) {
   hashContexts = {};
   stack1 = helpers.each.call(depth0, "subLink", "in", "link.submenu", {hash:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n            </ul>\n \n			");
+  data.buffer.push("\n            </ul>\n			");
   return buffer;
   }
 function program3(depth0,data) {
@@ -128,24 +128,12 @@ function program7(depth0,data) {
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "link.title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   }
 
-  data.buffer.push("<header class=\"navbar navbar-inverse navbar-fixed-top bs-docs-nav\" role=\"banner\" data-ng-controller=\"HeaderController\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\".bs-navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\" style=\"color: black;\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a href=\"../\" class=\"navbar-brand\">Gemini</a>\n    </div>\n    <nav class=\"collapse navbar-collapse bs-navbar-collapse\" role=\"navigation\">\n<!--       <ul class=\"nav navbar-nav\">\n        <li data-ng-repeat=\"item in menu\" data-ng-show=\"global.user\" ui-route=\"/");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.link", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\" ng-class=\"{active: $uiRoute}\">\n            <a href=\"#!/");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.link", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\">");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</a>\n        </li>\n      </ul> -->\n\n	   <ul class=\"nav navbar-nav navbar-right\">        \n		");
+  data.buffer.push("<header class=\"navbar navbar-inverse navbar-fixed-top bs-docs-nav\" role=\"banner\" data-ng-controller=\"HeaderController\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\".bs-navbar-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\" style=\"color: black;\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a href=\"../\" class=\"navbar-brand\">Gemini</a>\n    </div>\n    <nav class=\"collapse navbar-collapse bs-navbar-collapse\" role=\"navigation\">\n	   <ul class=\"nav navbar-nav navbar-right\">        \n		");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers.each.call(depth0, "link", "in", "view.menu", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </ul> \n\n<!-- \n      <ul class=\"nav navbar-nav navbar-right\" data-ng-hide=\"global.authenticated\">\n        <li><a href=\"signup\">Signup</a>\n        </li>\n        <li class=\"divider-vertical\"></li>\n        <li><a href=\"signin\">Signin</a>\n        </li>\n      </ul>\n\n      <ul class=\"nav navbar-nav navbar-right\" data-ng-show=\"global.authenticated\">\n        <li class=\"dropdown\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                ");
+  data.buffer.push("\n      </ul> \n\n	<!-- \n      <ul class=\"nav navbar-nav navbar-right\" data-ng-hide=\"global.authenticated\">\n        <li><a href=\"signup\">Signup</a>\n        </li>\n        <li class=\"divider-vertical\"></li>\n        <li><a href=\"signin\">Signin</a>\n        </li>\n      </ul>\n\n      <ul class=\"nav navbar-nav navbar-right\" data-ng-show=\"global.authenticated\">\n        <li class=\"dropdown\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "global.user.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
@@ -160,7 +148,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<div class=\"well\">\n    Welcome to Yeoman and Ember.js!\n</div>");
+  data.buffer.push("<div class=\"well\">\n    <h2>Welcome to the 100 Percent JS Boiler Plate</h2>\n    <h3>Core components</h3>\n    <ul>\n    	<li>Node</li>\n    	<li>Express</li>\n    	<li>Ember</li>\n    	<li>Bootstrap</li>\n    	<li>MongoDB</li>\n    </ul>\n    <h3>Additional Tools Available</h3>\n    <ul>\n    	<li>SASS - CSS pre-processor</li>\n    	<li>jQuery - Write less, do more\n	    <li>Grunt - The Javascript task runner</li>\n	    <li>Bower - Client-side dependency management</li>\n	    <li>RequireJS - Client-side module dependency and injection</li>\n	    <li>Handlebars - Advanced Client-side templating </li>\n	    <li>Hogan - Server-side templating</li>\n	    <li>Livereload - Automatic browser reload per save</li>\n	    <li>Mongoose - A NodeJS object modeler for MongoDB</li>\n	    <li>Passport - User Authentication</li>\n	    <li>Mocha - Unit Testing</li>\n	    <li>Font Awesome - CSS Icons</li>\n    </ul>    \n</div>");
   
 });
 
