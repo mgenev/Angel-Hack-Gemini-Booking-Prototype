@@ -9,6 +9,13 @@ var Emberapp = window.Emberapp = Ember.Application.create();
 
 (function() {
 
+Emberapp.HeaderController = Ember.ObjectController.extend({});
+
+
+})();
+
+(function() {
+
 Emberapp.UserEditController = Ember.ObjectController.extend({
   save: function(){
     // we're cheating here that there's no commit()
@@ -154,6 +161,32 @@ Emberapp.BoundTextFieldView = Ember.TextField.extend({
 
 (function() {
 
+Emberapp.HeaderView = Ember.View.extend({
+    templateName: 'header',
+    menu: [{
+        'title': 'Articles',
+        'link': 'articles'
+    }, {
+        'title': 'Create New Article',
+        'link': 'articles.create'
+    }, {
+        'title': 'Articles Drop',
+        'link': 'articles',
+        'submenu': [{
+            'title': 'Articles List',
+            'link': 'articles'
+        }, {
+            'title': 'Create New Article',
+            'link': 'articles.create'
+        }]
+    }]
+});
+
+
+})();
+
+(function() {
+
 Emberapp.UserEditView = Ember.View.extend({
     templateName: 'user_edit'
 });
@@ -182,15 +215,13 @@ Emberapp.UsersView = Ember.View.extend({
 (function() {
 
 Emberapp.Router.map(function () {
-  
-  this.resource('user_edit');
-  this.resource('user_edit', { path: '/user_edit/:user_edit_id' });
-  this.resource('user_edit.edit', { path: '/user_edit/:user_edit_id/edit' });
-  
-  this.resource('users');
-  this.resource('user', { path: '/user/:user_id' });
-  this.resource('user.edit', { path: '/user/:user_id/edit' });
-  
+	
+	this.resource('articles', function() {
+    	this.route('create');
+    	this.route('view');
+    	this.route('edit');
+  });
+    
 });
 
 
