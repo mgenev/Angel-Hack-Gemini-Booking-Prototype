@@ -23,7 +23,7 @@ var ReservationSchema = new Schema({
     services: {
         type: Array,
         default: [{
-            services: {
+            service: {
                 type: Schema.ObjectId,
                 ref: 'Service'
             },
